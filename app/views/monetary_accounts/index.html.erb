@@ -1,0 +1,96 @@
+<div>
+  <div id="profile-menu">
+    <div class="profile-menu-header">
+      <%= link_to @profile do %>
+        <div class="header-logo second-bkgrnd">
+          <h1 class="logo-font second-font ">A&C</h1> 
+        </div>      
+      <% end %>
+      <%= image_tag("Vectorprofilemenu.svg", id: "vectorprofilemenu-img") %>
+    </div>
+    <%= render 'layouts/admin_menu' %>
+  </div>
+  <div id="profile-admin-dark">
+    <div id="profile-form-main">
+      <%= render 'layouts/admin_header' %>
+      <div class="profile-form-desktop">
+        <%= render 'layouts/admin-menu-desktop'%>
+        <div class="account-list-container primary-bkgrnd">
+          <div class="images-list-header">
+            <% flash.each do |message_type, msg| %>
+              <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
+                <%= content_tag(:div, class: "vectormsg-wrapper") do %>
+                  <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
+                <% end %>
+                <%= content_tag(:h6, msg, class: "primary-font") %>
+              <% end %>
+            <% end %>          
+            <div class="profile-form-title primary-font">Listado de Cuentas</div>
+            <div>
+              <%= link_to new_monetary_account_path, class: "second-bkgrnd new-publ-link" do %>
+                <h2 class="primary-font new-publ-link-text">Agregar</h2>
+              <% end %>
+            </div>
+          </div>
+          <div class="third-bkgrnd">
+            <% @monetary_accounts.each do |monetary_account| %>
+              <div class="acc-list-item">
+                <div class="acc-items">
+                  <div class="acc-entity primary-font">
+                    <%= monetary_account.entity %>
+                  </div>
+                  <div class="acc-sublist">
+                    <% if monetary_account.identification.present? %>
+                      <div class="acc-data primary-font">
+                        <%= monetary_account.identification %>
+                      </div>
+                    <% end %> 
+                    <% if monetary_account.account_email.present? %>
+                      <div  class="acc-data primary-font">
+                        <%= monetary_account.account_email %>
+                      </div>
+                    <% end %>
+                    <% if monetary_account.account_number.present? %>
+                      <div  class="acc-data primary-font">
+                        <%= monetary_account.account_number %>
+                      </div>
+                    <% end %>     
+                    <% if monetary_account.account_kind.present? %>
+                      <div  class="acc-data primary-font">
+                        <%= monetary_account.account_kind %>
+                      </div>
+                    <% end %>  
+                  </div>             
+                </div>
+                <div class="account-dropdown">
+                  <div class="account-dropbtn">
+                    <div class="three-dots-wrapper">
+                      <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/>
+                      </svg>                
+                    </div>           
+                  </div>
+                  <div class="dropdown-content-wrapper2">
+                    <div class="dropdown-content-2">
+                      <%= link_to edit_monetary_account_path(id: monetary_account.id), class: "signout-link" do %>
+                        <div class="accsubmenu-text-wrapper">
+                          <h3 class="accsubmenu-text-content">Editar</h3>
+                        </div>
+                      <% end %>
+                      <%=  link_to monetary_account_path(id: monetary_account.id), data: { method: :delete }, class: "signout-link" do %>
+                        <div class="accsubmenu-text-wrapper">
+                          <h3 class="accsubmenu-text-content">Eliminar</h3>
+                        </div>
+                      <% end %>
+                    </div> 
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

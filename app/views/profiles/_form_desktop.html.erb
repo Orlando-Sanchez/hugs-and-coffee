@@ -1,0 +1,49 @@
+<%= form_with model: @profile do |f| %> 
+  <div class="profile-form-wrapper">
+    <div>
+      <div class="form profile-form-partone">
+        <div class="profile-fname-occptn">
+          <div class="field profile-partone-fix">
+            <%= f.label :fullname, 'Nombre y apellido', class: "label primary-font" %>
+            <%= f.text_field :fullname, class: 'field-field third-bkgrnd field-profile' %>
+          </div>
+          <div class="field profile-partone-fix">
+            <%= f.label :occupation, 'Ocupación', class: "label primary-font" %>
+            <%= f.text_field :occupation, class: 'field-field third-bkgrnd field-profile' %>
+          </div>
+        </div> 
+        <div class="field">
+          <%= f.label :biography, 'Biografía', class: "label primary-font" %>
+          <br>
+          <%= f.text_area :biography, class: 'bio-field-field third-bkgrnd' %>
+        </div>
+      </div>
+      <div class="dropify-customized">
+        <%= f.file_field :avatar, class: 'dropify', id: "input-file-now", data_max_file_size: '2M', data_allowed_file_extensions: 'pdf png svg' %>  
+      </div>
+    </div>
+    <div class="form profile-form-parttwo">
+      <div class="field">
+        <%= f.label :coffee_price, 'Monto de un café', class: "label primary-font" %>
+        <%= f.text_field :coffee_price, class: 'field-field field-profile-desktop third-bkgrnd' %>
+      </div>
+      <div class="field">
+        <%= f.label :currency_sign, 'Símbolo de la moneda', class: "label primary-font" %>
+        <%= f.text_field :currency_sign, class: 'field-field field-profile-desktop third-bkgrnd' %>
+      </div>
+
+      <span class="label primary-font">Multiplicadores</span>
+
+      <ul class="multipliers-wrapper">
+        <%= f.fields_for :multipliers do |multipliers_form| %>
+          <li>
+            <%= multipliers_form.number_field(:quantity, in: 1.0..10.0, step: 1.0, class: 'multiplier second-font') %>
+          </li>
+        <% end %>
+      </ul> 
+    </div>
+  </div>
+  <div class="submit-btn-wrapper submit-btn-break profile-submit-wrapper">
+    <%= f.submit "Guardar", class: "submit primary-font second-bkgrnd" %>
+  </div>
+<% end %>

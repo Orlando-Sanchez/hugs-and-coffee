@@ -1,0 +1,43 @@
+<header class="header third-bkgrnd">
+  <div class="admin-header second-bkgrnd">
+    <div>
+      <% unless current_page?(new_profile_path) %>
+        <div id="menu-icon">
+          <div class="menu-icon-line"></div>
+          <div class="menu-icon-line"></div>
+          <div class="menu-icon-line"></div>
+        </div>
+      <% end %>
+    </div>
+    <%= link_to root_path, class: "big-logo-font second-font" do %>
+      <h1>A&C</h1>
+    <% end %>
+  </div>
+  <% unless current_page?(new_profile_path) %>
+    <div class="signout-dropdown">
+      <div class="signout-dropbtn">
+        <% if @profile.avatar.present? %>
+          <div class="profile-avatar"><%= image_tag @profile.avatar, class: 'img-circle' %></div>
+        <% else %>
+          <div id="initials-wrapper" class="second-font" data-fullname="<%=@profile.fullname%>"></div>
+          <%= javascript_pack_tag 'profile_header_initials.js' %>
+        <%end%> 
+        <div id="header-profile-fullname" class="primary-font fullname-padding">
+          <%= @profile.fullname %>
+        </div>
+        <div class="vectordown-wrapper">
+          <%= image_tag("Vectordown.svg", class: "vectordown-img") %>
+        </div>
+      </div>
+      <div class="dropdown-content-wrapper">
+        <div class="dropdown-content">
+          <%= link_to destroy_user_session_path, method: :delete, class: "signout-link" do %>
+            <div class="signout-text-wrapper">
+              <h3 class="signout-text-content">Cerrar sesión</h3>
+            </div>
+          <% end %>
+        </div> 
+      </div>
+    </div>
+  <% end %>
+</header>

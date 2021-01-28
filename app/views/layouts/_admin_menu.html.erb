@@ -1,0 +1,32 @@
+<div class="links-menu-wrapper">
+  <% if controller_name == "profiles"%>
+    <div class="highlight-section-link section-link primary-font">
+      <%= link_to 'Perfil', edit_profile_path(id: @profile.id), class: 'highlight-text' %>
+    </div>
+  <% else %>
+    <div class="section-link primary-font">
+      <%= link_to 'Perfil', edit_profile_path(id: @profile.id) %>
+    </div>
+  <% end %>
+  <% if controller_name == "publications"%>
+    <div class="highlight-section-link section-link primary-font">
+      <%= link_to 'Imágenes', publications_path, class: 'highlight-text' %>
+    </div>
+  <% else %>
+    <div class="section-link primary-font">
+      <%= link_to 'Imágenes', publications_path %>
+    </div>
+  <% end %> 
+  <% if controller_name == "monetary_accounts"%>
+    <div class="highlight-section-link section-link primary-font">
+      <%= link_to 'Cuentas', monetary_accounts_path, class: 'highlight-text' %>
+    </div>
+  <% else %>
+    <div class="section-link primary-font">
+      <%= link_to 'Cuentas', monetary_accounts_path %>
+    </div>
+  <% end %> 
+  <div class="section-link primary-font">
+    <%= link_to 'Cerrar sesión', destroy_user_session_path, method: :delete, class: 'link-font-color' %>
+  </div>   
+</div>

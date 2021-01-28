@@ -1,0 +1,26 @@
+<%= form_with model: @publication do |f| %> 
+  <div>
+    <div class="publ-form-desktop">
+      <div>
+        <span class="primary-font publication-subtitle">Subtítulo</span>
+        <p class="primary-font subtitle-description">Agrega un subtítulo que le otorgue vida a tu imagen.</p>
+      </div>
+      <div class="publ-form-subtitle third-bkgrnd">
+        <%= f.label :subtitle, 'Subtítulo', class: "label primary-font" %>
+        <%= f.text_field :subtitle, class: 'field-field publ-field third-bkgrnd' %>
+      </div>
+    </div>
+    <div class="publ-form-desktop">
+      <div class="img-form-label">
+        <span class="primary-font publication-subtitle">Imagen</span>
+        <p class="primary-font subtitle-description">Comparte imágenes que conecten con las personas y muestren a que te dedicas.</p>
+      </div>
+      <div class="dropify-customized">
+        <%= f.file_field :image, class: 'dropify', id: "input-file-now" %>  
+      </div>
+    </div>
+  </div>
+  <div class="submit-btn-wrapper submit-btn-break profile-submit-wrapper">
+    <%= f.submit "Guardar", class: "submit submit-2 primary-font second-bkgrnd" %>
+  </div>
+<% end %>

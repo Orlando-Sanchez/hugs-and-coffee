@@ -1,0 +1,12 @@
+<%= render 'layouts/profile_header' %>
+<div class="coffee-main-wrapper primary-bkgrnd">
+  <div class= "back-wrapper">
+    <%= link_to appreciations_path do%>
+      <%= image_tag("Vector.svg", class: "vector-img") %>
+      <span class= "back primary-font">Atrás</span>
+    <% end %>
+  </div>
+  <div>
+    <%= render 'form_coffee', object: @appreciation %>
+  </div>
+</div>

@@ -1,0 +1,307 @@
+.main {
+  width: 350px;
+  height: 576px;
+  padding: 24px 20px;
+}
+
+.link-font-color {
+  color: #434242;;
+}
+
+input {
+  font-family: Roboto !important;
+}
+
+.primary-font {
+  font-family: Roboto;
+}
+
+.second-font {
+  font-family: Happy Monkey;
+}
+
+.primary-bkgrnd {
+  background:  #F8F8F8;
+}
+
+.second-bkgrnd {
+  background:  #EE4380;
+}
+
+.third-bkgrnd {
+  background: #FFFFFF;
+}
+
+.notice {
+  background: #E5FAE0;
+}
+
+.alert {
+  background: #FAE0E9;
+}
+
+.back-wrapper {
+  margin-bottom: 24px;
+}
+
+.vector-img {
+  width: 6px;
+  height: 10px;
+}
+
+.back {
+  margin-left: 8px;
+  font-weight: 300;
+  color: #434242
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 310px;
+  height: 254px;
+  box-shadow: 0px 1px 3px rgba(63, 63, 68, 0.15), 0px 0px 0px rgba(63, 63, 68, 0.05);
+  border-radius: 5px;
+  padding: 16px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.bottom-field {
+  margin-bottom: 0;
+}
+
+.label {
+  font-size: 14px;
+  letter-spacing: 0.02em;
+  color: #434242;
+}
+
+.field-field {
+  width: 278px;
+  height: 32px;
+  border: 1px solid #C4CDD5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.submit-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.submit {
+  width: 160px;
+  height: 48px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  color: #FFFFFF;
+  border: none;
+}
+
+.submit:hover {
+  cursor: pointer;
+}
+
+.delete-btn {
+  border: 1px solid #98234D;
+  margin-top: 24px;
+}
+
+.delete-btn-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #98234D;
+}
+
+.save-btn-text {
+  font-style: normal !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  line-height: 21px !important;
+  display: flex !important;
+  align-items: center !important;
+  text-align: center !important;
+  color: #FFFFFF !important;
+  padding-left: 47px !important;
+}
+
+.vectormsg-wrapper {
+  padding-left: 280px;
+}
+
+.msg-wrapper {
+  position: absolute;
+  width: 310px;
+  height: 93px;
+  border-radius: 10px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  color: #434242;
+  z-index: 2;
+  left: 20px;
+  padding-top: 8px;
+  top: 85px
+}
+
+#vectorprofilemenu-img {
+  width: 17px;
+  height: 17px;
+}
+
+#vectormsgwrapper-img {
+  width: 17px;
+  height: 17px;
+}
+
+#vectormsgwrapper-img:hover {
+  cursor: pointer;
+}
+
+.msg-fix {
+  margin-top: 25px;
+}
+
+.hideDiv {
+  display: none;
+}
+
+@media screen and (min-width: 736px) {
+
+.vectormsg-wrapper {
+  padding-left: 620px;
+}
+
+.msg-wrapper {
+  font-size: 21px;
+  width: 660px;
+  left: 38px;
+  top: 85px
+}
+
+.main {
+  width: 736px;
+  height: 960px;
+  padding: 40px 38px;
+}
+
+.back-wrapper {
+  margin-bottom: 32px;
+}
+
+.vector-img {
+  width: 8px;
+  height: 12px;
+}
+
+.back {
+  line-height: 19px;
+}
+
+.field {
+  margin-bottom: 24px;
+}
+
+.label {
+  font-size: 16px;
+}
+
+.field-field {
+  width: 612px;
+  height: 40px;
+  margin-top: 12px;
+}
+
+.bottom-field {
+  margin-bottom: 0;
+}
+
+.submit {
+  font-size: 20px;
+}
+
+.delete-btn {
+  margin-top: 0;
+  margin-right: 32px;
+}
+
+.save-btn-text {
+  font-size: 20px !important;
+  line-height: 23px !important;
+}
+}
+
+@media screen and (min-width: 1440px) {
+
+.vectormsg-wrapper {
+  padding-left: 1150px;
+}
+  
+.msg-wrapper {
+  font-size: 24px;
+  width: 1200px;
+  left: 200px;
+  top: 85px
+}
+  
+.main {
+  width: 100%;
+  height: 960px;
+  padding: 48px 48px;
+}
+
+.back-wrapper {
+  margin-bottom: 48px;
+}
+
+.vector-img {
+  width: 10px;
+  height: 14px;
+}
+
+.back {
+  line-height: 23px;
+}
+
+.field {
+  margin-bottom: 32px;
+}
+
+.label {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.field-field {
+  width: 737.08px;
+  height: 48px;
+}
+
+.bottom-field {
+  margin-bottom: 0;
+}
+
+.submit {
+  width: 224px;
+  height: 64px;
+  font-size: 24px;
+}
+
+.submit-2 {
+  width: 160px !important;
+  height: 48px !important;
+}
+}

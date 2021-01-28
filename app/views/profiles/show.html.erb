@@ -1,0 +1,17 @@
+<%= render 'layouts/profile_header' %>
+<div class="primary-bkgrnd">
+  <div class="bio-wrapper">
+    <p class="primary-font profile-font"><%= @profile.biography %></p>
+  </div>
+  <div>
+    <div class="owl-carousel">
+      <% @publications.each do |publication| %>
+        <%= image_tag publication.image %>
+        <%= publication.subtitle %>
+      <% end %>
+    </div>
+    <%= link_to appreciations_path, class: "second-bkgrnd new-publ-link" do %>
+      <h2 class="primary-font new-publ-link-text">Agradecer</h2>
+    <% end %>
+  </div>
+</div>

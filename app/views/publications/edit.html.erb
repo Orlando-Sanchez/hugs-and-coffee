@@ -1,0 +1,28 @@
+<div>
+  <div id="profile-menu">
+    <div class="profile-menu-header">
+      <%= link_to @profile do %>
+        <div class="header-logo second-bkgrnd">
+          <h1 class="logo-font second-font ">A&C</h1> 
+        </div>      
+      <% end %>
+      <%= image_tag("Vectorprofilemenu.svg", id: "vectorprofilemenu-img") %>
+    </div>
+    <%= render 'layouts/admin_menu' %>
+  </div>
+  <div id="profile-admin-dark">
+    <div id="profile-form-main">
+      <%= render 'layouts/admin_header' %>
+      <div class="profile-form-desktop">
+        <%= render 'layouts/admin-menu-desktop' %>
+        <div class="publication-form-container">
+          <div class="publication-form-header">
+            <div class="profile-form-title primary-font">Editar imágenes</div>
+          </div>
+          <%= render 'form_edit', object: @publication %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

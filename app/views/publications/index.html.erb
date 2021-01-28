@@ -1,0 +1,49 @@
+<div>
+  <div id="profile-menu">
+    <div class="profile-menu-header">
+      <%= link_to @profile do %>
+        <div class="header-logo second-bkgrnd">
+          <h1 class="logo-font second-font ">A&C</h1> 
+        </div>      
+      <% end %>
+      <%= image_tag("Vectorprofilemenu.svg", id: "vectorprofilemenu-img") %>
+    </div>
+    <%= render 'layouts/admin_menu' %>
+  </div>
+  <div id="profile-admin-dark">
+    <div id="profile-form-main">
+      <%= render 'layouts/admin_header' %>
+      <div class="profile-form-desktop">
+        <%= render 'layouts/admin-menu-desktop' %>
+        <div class="images-list-container primary-bkgrnd">
+          <div class="images-list-header">
+            <% flash.each do |message_type, msg| %>
+              <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
+                <%= content_tag(:div, class: "vectormsg-wrapper") do %>
+                  <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
+                <% end %>
+                <%= content_tag(:h6, msg, class: "primary-font") %>
+              <% end %>
+            <% end %>          
+            <div class="profile-form-title primary-font">Listado de Imágenes</div>
+            <div>
+              <%= link_to new_publication_path, class: "second-bkgrnd new-publ-link" do %>
+                <h2 class="primary-font new-publ-link-text">Agregar</h2>
+              <% end %>
+            </div>
+          </div>
+          <% if @publications.any? %>
+           <div class="image-list-wrapper third-bkgrnd">
+            <% @publications.each do |publication| %>
+              <%= link_to edit_publication_path(id: publication.id) do %>
+                <%= image_tag publication.image, class: "publ-image-link" %>
+              <% end %>
+            <% end %>
+            </div>         
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

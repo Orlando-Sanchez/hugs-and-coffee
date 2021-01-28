@@ -1,0 +1,30 @@
+<%= form_with model: @publication do |f| %> 
+  <div>
+    <div class="publ-form-desktop">
+      <div>
+        <span class="primary-font publication-subtitle">Subtítulo</span>
+        <p class="primary-font subtitle-description">Agrega un subtítulo que le otorgue vida a tu imagen.</p>
+      </div>
+      <div class="publ-form-subtitle third-bkgrnd">
+        <%= f.label :subtitle, 'Subtítulo', class: "label primary-font" %>
+        <%= f.text_field :subtitle, class: 'field-field publ-field third-bkgrnd' %>
+      </div>
+    </div>
+    <div class="publ-form-desktop">
+      <div class="img-form-label">
+        <span class="primary-font publication-subtitle">Imagen</span>
+        <p class="primary-font subtitle-description">Comparte imágenes que conecten con las personas y muestren a que te dedicas.</p>
+      </div>
+      <div class="dropify-customized">
+        <%= f.file_field :image, class: 'dropify', id: "input-file-now" %>
+      </div>
+    </div>
+  </div>
+  <div class="edit-publ-btns">
+    <%= f.submit "Guardar", class: "submit submit-2 save-btn-text primary-font second-bkgrnd" %>
+
+    <%= link_to publication_path(@publication), data: { method: :delete }, class: 'create-profile-link submit-2 third-bkgrnd delete-btn' do %>
+      <h2 class="primary-font delete-btn-text">Eliminar</h2>
+    <%end%>
+  </div>
+<% end %>

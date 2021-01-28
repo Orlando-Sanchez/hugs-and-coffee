@@ -1,0 +1,25 @@
+<header class="header third-bkgrnd profile-header">
+  <%= link_to profile_path, class: "profile-link" do %>
+    <% if @profile.avatar.present? %>
+      <div class="profile-avatar"><%= image_tag @profile.avatar, class: 'img-circle' %></div>
+    <% else %>
+      <div id="initials-wrapper" class="second-font" data-fullname="<%=@profile.fullname%>"></div>
+      <%= javascript_pack_tag 'profile_header_initials.js' %>
+    <%end%>
+    <div class="header-profile-data">
+      <div id="header-profile-fullname" class="primary-font">
+        <%= @profile.fullname %>
+      </div>
+      <div class="header-profile-occupation primary-font">
+        <%= @profile.occupation %>
+      </div>
+    </div>
+  <% end %>
+  <%= link_to root_path do %>
+    <div class="header-logo-container">
+      <div class="header-logo second-bkgrnd">
+        <h1 class="logo-font second-font ">A&C</h1> 
+      </div>
+    </div>
+  <% end %>
+</header> 

@@ -1,0 +1,213 @@
+.account-list-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 57px 20px;
+}
+
+.acc-list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  border-bottom: 0.4px solid #DAE1E7;;
+}
+
+.acc-entity {
+  height: 35px;
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #212B36;
+}
+
+.acc-data {
+  margin-bottom: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.02em;
+  color: #434242;
+}
+
+.account-form-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background: #F8F8F8;
+  padding: 0px 20px 41px 20px
+}
+
+.money-acc-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 310px;
+  height: 361px;
+  box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
+  border-radius: 5px;
+  padding: 27px 16px 16px 16px
+}
+
+.alt-field {
+  margin-bottom: 15.7px;
+}
+
+.alt-field-field {
+  width: 278px;
+  height: 32px;
+  border: 1px solid #C4CDD5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 4px;
+}
+
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 65px;
+  width: 60px;
+  height: 46px;
+  padding-left: 44px;
+}
+
+.account-dropdown:hover .dropdown-content-wrapper2 {
+  display: block;
+}
+
+.account-dropbtn {
+  border: none;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+}
+
+.dropdown-content-wrapper2 {
+  display: none;
+  width: 130px;
+  height: 86px;
+  padding-top: 12px;
+}
+
+.dropdown-content-2 {
+  position: absolute;
+  width: 128px;
+  height: 80px;
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1px solid #DAE1E7;
+  box-sizing: border-box;
+  padding: 8px 1.01px 8px 0.99px;
+  left: -60px
+}
+
+.accsubmenu-text-wrapper {
+  width: 128px;
+  height: 32px;
+  padding-top: 7px;
+}
+
+.accsubmenu-text-wrapper:hover {
+  background-color: rgba(196, 196, 196, 0.2);
+}
+
+.accsubmenu-text-content {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: #434242;
+}
+
+@media screen and (min-width: 736px) {
+
+
+  .account-dropdown {
+    margin-left: 0;
+  }
+
+  .acc-entity {
+    width: 33%;
+  }
+
+  .acc-items {
+    display: flex;
+    width: 596px;
+  }
+
+  .acc-sublist {
+    display: flex;
+    flex-wrap: wrap;
+    width: 66%;
+    justify-content: space-between;
+  }
+
+  .account-list-container {
+    height: 960px;
+    padding: 0 38px 57px 38px;
+  }
+
+  .account-form-container {
+    padding: 0 38px 170px 38px;
+  }
+
+  .money-acc-wrapper {
+    width: 660px;
+    height: 489px;
+    padding: 45px 24px 24px 24px;
+  }
+
+  .alt-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+  }
+
+  .alt-field-field {
+    width: 612px;
+    height: 40px;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+
+  .acc-data {
+    width: 25%;
+  }
+
+  .acc-items {
+    width: 980px;
+    padding-top: 40px;
+  }
+
+  .acc-entity {
+    width: 20%;
+    margin-right: 64px;
+  }
+
+  .acc-sublist {
+    width: 80%;
+  }
+
+  .account-list-container {
+    width: 84%;
+    padding: 0 70px 57px 71px;
+    border-left: 0.5px solid #C4CDD5
+  }
+
+  .account-form-container {
+    padding: 0px 70px 135px 71px;
+    width: 82.23%;
+  }
+
+  .account-form-wrapper {
+    display: flex;
+    justify-content: space-between
+  }
+}
+

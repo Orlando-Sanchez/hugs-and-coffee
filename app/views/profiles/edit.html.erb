@@ -1,0 +1,49 @@
+<div class="profile-edit-view">
+  <div id="profile-menu">
+    <div class="profile-menu-header">
+      <%= link_to @profile do %>
+        <div class="header-logo second-bkgrnd">
+          <h1 class="logo-font second-font ">A&C</h1> 
+        </div>      
+      <% end %>
+      <%= image_tag("Vectorprofilemenu.svg", id: "vectorprofilemenu-img") %>
+    </div>
+    <%= render 'layouts/admin_menu' %>
+  </div>
+  <div id="profile-admin-dark">
+    <div id="profile-form-main">
+      <%= render 'layouts/admin_header'%>
+      <div class="profile-form-desktop">
+        <%= render 'layouts/admin-menu-desktop'%>
+        <div class="profile-form-container">
+          <div id="profile-form-header">
+            <% flash.each do |message_type, msg| %>
+              <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
+                <%= content_tag(:div, class: "vectormsg-wrapper") do %>
+                  <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
+                <% end %>
+                <%= content_tag(:h6, msg, class: "primary-font") %>
+              <% end %>
+            <% end %>
+            <div class="profile-form-title primary-font">Perfil del usuario</div>
+            <div class="btn-section">
+              <div id="btn-wrapper">
+                <div id="toggle_btn">
+                  <div id="inner_circle" data-ispublished="<%=@profile.is_published%>" data-id="<%=@profile.id%>"></div>
+                </div>
+              </div>
+              <div id="btn_label" class="primary-font"></div>
+            </div>
+          </div>
+          <div class="profile-form-small">
+            <%= render 'form', object: @profile %>
+          </div>
+          <div class="profile-form-big">
+            <%= render 'form_desktop', object: @profile %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

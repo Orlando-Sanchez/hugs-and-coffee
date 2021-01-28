@@ -1,0 +1,15 @@
+<header class="header third-bkgrnd main-header">
+  <%= link_to root_path do %>
+    <div class="header-logo second-bkgrnd">
+      <h1 class="logo-font second-font">A&C</h1> 
+    </div>      
+  <% end %>
+  <% if current_page?(root_path) && !current_user %>
+    <%= link_to new_user_session_path do %>
+      <div class="login-container" >
+        <h2 class="login-link primary-font">Login</h2>
+      </div>         
+    <% end %>
+  <% end %>
+</header>
+

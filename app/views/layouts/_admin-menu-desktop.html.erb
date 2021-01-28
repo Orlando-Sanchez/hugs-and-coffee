@@ -1,0 +1,32 @@
+<div class="admin-menu-desktop">
+  <div>
+    <%= link_to edit_profile_path(id: @profile.id), class: "admin-menu-link" do %>
+      <% if controller.controller_name == "profiles"%>
+        <%= image_tag("profile-icon-red.svg") %>
+      <% else %>
+        <%= image_tag("profile-icon.svg") %>        
+      <% end %>
+      <%= content_tag :h2, "Perfil", class: (controller.controller_name == "profiles" ? "admin-text-red" : "admin-text-black")%>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to publications_path, class: "admin-menu-link" do %>
+      <% if controller.controller_name == "publications"%>
+        <%= image_tag("imagenes-icon-red.svg") %>
+      <% else %>
+        <%= image_tag("imagenes-icon.svg") %>        
+      <% end %>
+      <%= content_tag :h2, "Imágenes", class: (controller.controller_name == "publications" ? "admin-text-red" : "admin-text-black")%>    
+    <% end %>
+  </div>
+  <div>
+    <%= link_to monetary_accounts_path, class: "admin-menu-link" do %>
+      <% if controller.controller_name == "monetary_accounts"%>
+        <%= image_tag("cuentas-icon-red.svg") %>
+      <% else %>
+        <%= image_tag("cuentas-icon.svg") %>        
+      <% end %>
+      <%= content_tag :h2, "Cuentas", class: (controller.controller_name == "monetary_accounts" ? "admin-text-red" : "admin-text-black")%>    
+    <% end %>
+  </div>
+</div>

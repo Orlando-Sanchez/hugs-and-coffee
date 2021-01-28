@@ -1,0 +1,46 @@
+<div class= "main primary-bkgrnd">
+  <div class= "back-wrapper">
+    <%= link_to root_path do%>
+      <%= image_tag("Vector.svg") %>
+      <span class= "back primary-font">Atrás</span>
+    <% end %>
+  </div>
+
+  <div class= "login-form-container">
+    <div>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class= " form login-form third-bkgrnd">
+          <h2 class= "login-header primary-font">Login</h2>
+
+          <div class="field">
+            <%= f.label :email, 'Correo electrónico', class: "label primary-font" %><br />
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field third-bkgrnd" %>
+          </div>
+
+          <div class="field">
+            <%= f.label :password, 'Contraseña', class: "label primary-font" %><br />
+            <%= f.password_field :password, autocomplete: "current-password", class: "field-field third-bkgrnd" %>
+          </div>
+        </div> 
+        <div class= "submit-btn-wrapper">
+          <%= f.submit "Entrar", class: "submit primary-font second-bkgrnd" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render "devise/shared/links" %>
+
+
+<%
+=begin%>
+  
+    <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me, 'Recordarme' %>
+      </div>
+    <% end %> 
+<%
+=end%>

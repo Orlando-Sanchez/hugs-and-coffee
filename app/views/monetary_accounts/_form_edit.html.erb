@@ -1,0 +1,41 @@
+<%= form_with model: @monetary_account do |f| %>
+  <div class="account-form-wrapper">
+    <div>
+      <span class="primary-font publication-subtitle">Información de la cuenta</span>
+      <p class="primary-font subtitle-description">Crea una cuenta donde las personas puedan agradecerte.</p>
+    </div>
+    <div class="money-acc-wrapper third-bkgrnd">
+      <div class="alt-field">
+        <%= f.label :entity, 'Entidad', class: "label primary-font" %>
+        <%= f.text_field :entity, class: 'alt-field-field publ-field third-bkgrnd' %>
+      </div>
+
+      <div class="alt-field">
+        <%= f.label :account_email, 'Email', class: "label primary-font" %>
+        <%= f.text_field :account_email, class: 'alt-field-field publ-field third-bkgrnd' %>
+      </div>
+
+      <div class="alt-field">
+        <%= f.label :account_number, 'Número de cuenta', class: "label primary-font" %>
+        <%= f.text_field :account_number, class: 'alt-field-field publ-field third-bkgrnd' %>
+      </div>
+
+      <div class="alt-field">
+        <%= f.label :identification, 'Identificación', class: "label primary-font" %>
+        <%= f.text_field :identification, class: 'alt-field-field publ-field third-bkgrnd' %>
+      </div>
+
+      <div class="alt-field">
+        <%= f.label :account_kind, 'Tipo de cuenta', class: "label primary-font" %>
+        <%= f.text_field :account_kind, class: 'alt-field-field publ-field third-bkgrnd' %>
+      </div>
+    </div>
+  </div>
+  <div class="edit-publ-btns">
+    <%= f.submit "Guardar", class: "submit submit-2 save-btn-text primary-font second-bkgrnd" %>
+
+    <%= link_to monetary_account_path(@monetary_account), data: { method: :delete }, class: 'create-profile-link submit-2 third-bkgrnd delete-btn' do %>
+      <h2 class="primary-font delete-btn-text">Eliminar</h2>
+    <%end%>
+  </div>
+<% end %>

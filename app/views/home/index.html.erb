@@ -1,0 +1,57 @@
+<%= render 'layouts/main_header' %>
+<div class="home-one-container">
+  <% flash.each do |message_type, msg| %>
+    <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
+      <%= content_tag(:div, class: "vectormsg-wrapper") do %>
+        <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
+      <% end %>
+      <%= content_tag(:h6, msg, class: "primary-font") %>
+    <% end %>
+  <% end %>
+  <div class="coffees-img-wrapper">
+    <%= image_tag("coffees.svg", class: "coffees-img") %>
+  </div>
+  <div class="intro-text-wrapper">
+    <h1 class="intro-text-thick second-font ">Un café es un abrazo atrapado en una taza</h1>
+  </div>
+  <div class="intro-text-thin primary-font" >
+    <h2>Recibe aprecio y gratitud mediante donaciones online</h2>
+  </div>
+  <div class="create-profile-link-wrapper">
+    <% if !current_user %>
+      <%= link_to new_user_registration_path, class: "create-profile-link second-bkgrnd" do %>
+        <h2 class="create-profile-link-text primary-font">Crear mi perfil</h2>
+      <% end %>
+    <% else %>
+      <% if current_user.profile %>
+        <%= link_to edit_profile_path(id: current_user.profile.id), class: "create-profile-link second-bkgrnd" do %>
+          <h2 class="create-profile-link-text primary-font">Editar mi perfil</h2>
+        <% end %>
+      <% else %>
+        <%= link_to new_profile_path, class: "create-profile-link second-bkgrnd" do %>
+          <h2 class="create-profile-link-text primary-font">Crear mi perfil</h2>
+        <% end %>
+      <% end %>  
+    <% end %>
+  </div>
+</div>
+<div class="home-two-container second-bkgrnd">
+  <div class="intro-text-container">
+    <h1 class="intro-text-thick-2 second-font ">Un perfil dedicado a recibir agradecimientos</h1>
+  </div>
+  <div class="intro-text-last primary-font">
+    <h2>Puedes crear una página en minutos sin conocimientos técnicos. Muestra tus datos y agradecimientos recibidos de otras personas.</h2>
+  </div>
+  <div class="cellphones-img-wrapper">
+    <%= image_tag("cellphones.svg", class: "cellphones-img") %>
+  </div>
+  <div class="owl-carousel owl-theme">
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+    <div> Your Content </div>
+  </div>
+</div>

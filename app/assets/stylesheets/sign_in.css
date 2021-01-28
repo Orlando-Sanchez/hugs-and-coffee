@@ -1,0 +1,45 @@
+.login-header {
+  font-weight: bold;
+  line-height: 19px;
+  margin-bottom: 16px;
+}
+
+.login-form {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: 736px) {
+.login-header {
+  line-height: 21px;
+  font-size: 18px;
+  margin-bottom: 32px;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.login-form {
+  width: 660px;
+  height: 348px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.login-header {
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 40px;
+}
+
+.login-form {
+  width: 800px;
+  height: 418px;
+  padding: 32px;
+  margin-bottom: 48px;
+}
+}
+

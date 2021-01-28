@@ -1,0 +1,40 @@
+.bio-wrapper {
+  padding: 0 20px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+.profile-font {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 130%;
+  letter-spacing: 0.01em;
+  color: #434242;
+}
+
+@media screen and (min-width: 736px) {
+  .bio-wrapper {
+    padding: 0 64px;
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+  
+  .profile-font {
+    font-size: 18px;
+    letter-spacing: 0.02em;
+  }  
+}
+
+@media screen and (min-width: 1440px) {
+  .bio-wrapper {
+    padding: 0 207px;
+    margin-top: 48px;
+    margin-bottom: 32px;
+  }
+  
+  .profile-font {
+    font-size: 24px;
+  }  
+}
+
