@@ -46,25 +46,25 @@
 
 @media screen and (min-width: 1440px) {
 
-.form-header {
-  font-size: 24px;
-  line-height: 28px;
-  width: 213px;
-  height: 22px;
-  margin-bottom: 32px;
-}
+  .form-header {
+    font-size: 24px;
+    line-height: 28px;
+    width: 213px;
+    height: 22px;
+    margin-bottom: 32px;
+  }
 
-.signup-form {
-  width: 800px;
-  height: 418px;
-  padding: 32px;
-  margin-bottom: 48px;
-}
+  .signup-form {
+    width: 800px;
+    height: 418px;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
 
-.your-data {
-  height: 19px;
-  font-size: 20px;
-  line-height: 23px;
-  margin-bottom: 40px;
-}
+  .your-data {
+    height: 19px;
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 40px;
+  }
 }

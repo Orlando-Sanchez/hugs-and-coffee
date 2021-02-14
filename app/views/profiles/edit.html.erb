@@ -1,7 +1,7 @@
 <div class="profile-edit-view">
   <div id="profile-menu">
     <div class="profile-menu-header">
-      <%= link_to @profile do %>
+      <%= link_to root_path do %>
         <div class="header-logo second-bkgrnd">
           <h1 class="logo-font second-font ">A&C</h1> 
         </div>      
@@ -17,14 +17,7 @@
         <%= render 'layouts/admin-menu-desktop'%>
         <div class="profile-form-container">
           <div id="profile-form-header">
-            <% flash.each do |message_type, msg| %>
-              <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
-                <%= content_tag(:div, class: "vectormsg-wrapper") do %>
-                  <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
-                <% end %>
-                <%= content_tag(:h6, msg, class: "primary-font") %>
-              <% end %>
-            <% end %>
+
             <div class="profile-form-title primary-font">Perfil del usuario</div>
             <div class="btn-section">
               <div id="btn-wrapper">

@@ -54,6 +54,17 @@
   padding: 17.5px 22px 17.5px 23px;
 }
 
+.edit-profile-link-text {
+  width: 115px;
+  height: 13px;
+  font-weight: 500;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+}
+
 .create-profile-link-text {
   width: 115px;
   height: 13px;
@@ -141,6 +152,12 @@
   padding: 17px 16px 17px 17px;
 }
 
+.edit-profile-link-text {
+  width: 127px;
+  height: 14px;
+  font-size: 19px;
+}
+
 .create-profile-link-text {
   width: 127px;
   height: 14px;
@@ -214,6 +231,15 @@
 .create-profile-link {
   width: 224px;
   height: 64px;
+}
+
+.edit-profile-link-text {
+  display: block;
+  width: 156px;
+  height: 16px;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
 }
 
 .create-profile-link-text {

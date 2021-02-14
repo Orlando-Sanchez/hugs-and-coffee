@@ -24,8 +24,7 @@ class PublicationsController < ApplicationController
     if @publication.save
       redirect_to publications_url, notice: "La publicación ha sido creada"
     else
-      flash.now[:alert] = "No se pudo crear la publicación"
-      render 'new'
+      redirect_to new_publication_url, alert2: "No se pudo crear la publicación"
     end
   end
 
@@ -43,8 +42,7 @@ class PublicationsController < ApplicationController
     if @publication.update(publication_params)
       redirect_to publications_url, notice: "La publicación ha sido actualizada"
     else
-      flash.now[:alert] = "No se pudo actualizar la publicación"
-      render 'edit'
+      redirect_to edit_publication_url, alert2: "No se pudo actualizar la publicación"
     end
   end
 
@@ -52,9 +50,8 @@ class PublicationsController < ApplicationController
     @publication = Publication.find(params[:id])
     if @publication.destroy
       redirect_to publications_url, notice: "La publicación ha sido eliminada"
-    else 
-      flash.now[:alert] = "No se pudo eliminar la publicación"
-      render 'edit'
+    else
+      redirect_to edit_publication_url, alert2: "No se pudo eliminar la publicación"
     end
   end
 

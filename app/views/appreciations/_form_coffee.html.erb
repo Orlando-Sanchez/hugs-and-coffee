@@ -1,9 +1,8 @@
 <%= form_with model: @appreciation do |f| %>
   <div class="coffee-select-wrapper third-bkgrnd">
-    <p>¿Cuántos café?</p>
+    <p class="primary-font your-data">¿Cuántos café?</p>
     <div class="coffee-info">
       <%= image_tag("coffee.svg", class: "coffee-img") %>
-      <p>X</p>
       <div class="multipliers-qty-wrapper">
         <div class="multiplier-btn" id="b1"><p class="primary-font" id="q1"><%= @multipliers[0][:quantity]%></p></div>
         <div class="multiplier-btn" id="b2"><p class="primary-font" id="q2"><%= @multipliers[1][:quantity]%></p></div>
@@ -11,49 +10,49 @@
         <div class="multiplier-btn" id="b4"><p class="primary-font" id="q4"><%= @multipliers[3][:quantity]%></p></div>
       </div>
     </div>
-    <div class="coffee-info"><p><%= @profile.currency_sign %></p><p id="coffee-price"><%= @profile.coffee_price %></p></div>
-    <div><p>Total: <%= @profile.currency_sign %> <span id="total-amount"></span></p></div>
+    <div class="coffee-info"><p class="primary-font"><%= @profile.currency_sign %></p><p id="coffee-price" class="primary-font"><%= @profile.coffee_price %></p></div>
+    <div><p class="primary-font">Total: <%= @profile.currency_sign %> <span id="total-amount" class="primary-font"></span></p></div>
   </div>
+  <div class="third-bkgrnd accounts-header-wrapper"><p class="primary-font select-appreciation-header">Cuentas de <%= @profile.fullname %></p></div>
+  <% @monetary_accounts.each do |monetary_account| %>
+    <div class="entity-data-wrapper third-bkgrnd">
+      <% if monetary_account.entity.present? %>
+        <p class="label primary-font entity-data">Entidad: <%= monetary_account.entity %></p>
+      <% end %>
+      <% if monetary_account.account_email.present? %>
+        <p class="label primary-font entity-data">Email: <%= monetary_account.account_email %></p>
+      <% end %>
+      <% if monetary_account.account_number.present? %>
+        <p class="label primary-font entity-data">Nro de cuenta: <%= monetary_account.account_number %></p>
+      <% end %>  
+      <% if monetary_account.identification.present? %>
+        <p class="label primary-font entity-data">Identificación: <%= monetary_account.identification %></p>
+      <% end %>    
+      <% if monetary_account.account_kind.present? %>
+        <p class="label primary-font entity-data">Tipo de cuenta: <%= monetary_account.account_kind %></p>
+      <% end %>                             
+    </div>
+  <% end %>
   <div class="coffee-form-part third-bkgrnd">
-    <p class="primary-font select-appreciation-header">Datos de <%= @profile.fullname %></p>
-    <% @monetary_accounts.each do |monetary_account| %>
-      <div class="entity-data-wrapper">
-        <% if monetary_account.entity.present? %>
-          <p class="label primary-font entity-data">Entidad: <%= monetary_account.entity %></p>
-        <% end %>
-        <% if monetary_account.account_email.present? %>
-          <p class="label primary-font entity-data">Email: <%= monetary_account.account_email %></p>
-        <% end %>
-        <% if monetary_account.account_number.present? %>
-          <p class="label primary-font entity-data">Nro de cuenta: <%= monetary_account.account_number %></p>
-        <% end %>  
-        <% if monetary_account.identification.present? %>
-          <p class="label primary-font entity-data">Identificación: <%= monetary_account.identification %></p>
-        <% end %>    
-        <% if monetary_account.account_kind.present? %>
-          <p class="label primary-font entity-data">Tipo de cuenta: <%= monetary_account.account_kind %></p>
-        <% end %>                                
-      </div>
-      <span class="entity-line"></span>  
-    <% end %>
-  </div>
-  <div class="coffee-form-part third-bkgrnd">
-    <p>Tus datos</p>
+    <p class="primary-font select-appreciation-header donor-data-header">Tus datos</p>
     <div class="field">
       <%= f.label :donor_fullname, 'Nombre', class: "label primary-font" %>
       <br>
-      <%= f.text_field :donor_fullname, class: 'field-field third-bkgrnd field-profile' %>
+      <%= f.text_field :donor_fullname, class: 'field-field third-bkgrnd donor-field' %>
     </div> 
     <div class="field">
       <%= f.label :donor_occupation, 'Ocupación', class: "label primary-font" %>
       <br>
-      <%= f.text_field :donor_occupation, class: 'field-field third-bkgrnd field-profile' %>
+      <%= f.text_field :donor_occupation, class: 'field-field third-bkgrnd donor-field' %>
     </div>     
     <div class="field">
       <%= f.label :donor_message, 'Mensaje de agradecimiento:', class: "label primary-font" %>
       <br>
-      <%= f.text_area :donor_message, class: 'bio-field-field third-bkgrnd' %>
+      <%= f.text_area :donor_message, class: 'donor-field-field third-bkgrnd primary-font' %>
     </div>
-    <%= f.hidden_field :coffees_quantity, value: 0, id: "coffees_quantity"%>   
+    <%= f.hidden_field :coffees_quantity, id: "coffees-quantity"%>   
+  </div>
+  <div class="submit-btn-wrapper submit-btn-break profile-submit-wrapper">
+    <%= f.submit "Enviar", class: "submit primary-font second-bkgrnd" %>
   </div>
 <% end %>

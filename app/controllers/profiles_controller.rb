@@ -19,10 +19,9 @@ class ProfilesController < ApplicationController
   def create
     @profile = current_user.build_profile(profile_params)
     if @profile.save
-      redirect_to root_url, notice: "El perfil ha sido creado"
+      redirect_to root_url, notice: "¡Tu perfil ha sido creado!"
     else
-      flash.now[:alert] = "No se pudo crear el perfil"
-      render 'new'
+      redirect_to new_profile_url, alert2: "No se pudo crear el perfil"
     end
   end
 
@@ -44,8 +43,7 @@ class ProfilesController < ApplicationController
     if @profile.update(profile_params)
       redirect_to edit_profile_url, notice: "El perfil ha sido actualizado"
     else
-      flash.now[:alert] = "No se pudo actualizar el perfil"
-      render 'edit'
+      redirect_to edit_profile_url, alert2: "No se pudo actualizar el perfil"
     end
   end
 

@@ -224,8 +224,7 @@
   }
 }
 
-@media screen and (min-width: 1440px) {
-  
+@media screen and (min-width: 1440px) { 
   .profile-edit-view {
     height: 880px;
     width: 100%;

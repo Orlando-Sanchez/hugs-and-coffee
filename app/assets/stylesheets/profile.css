@@ -13,7 +13,20 @@
   color: #434242;
 }
 
+.new-publ-link2 {
+  display: flex;
+  justify-content: center;
+  width: 160px;
+  height: 48px;
+  border-radius: 5px;
+  padding: 15px 48px 18px 36px;
+}
+
 @media screen and (min-width: 736px) {
+  .new-publ-link2 {
+    padding: 14px 48px 18px 32px;
+  }
+
   .bio-wrapper {
     padding: 0 64px;
     margin-top: 40px;

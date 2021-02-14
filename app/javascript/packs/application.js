@@ -19,9 +19,7 @@ import 'owl.carousel';
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-
 document.addEventListener("turbolinks:load", function() {
-  console.log('prueba dentro del event listener');
   $('.owl-carousel').owlCarousel({
     stagePadding: 50,
     loop: true,

@@ -23,8 +23,7 @@ class MonetaryAccountsController < ApplicationController
     if @monetary_account.save
       redirect_to root_url, notice: "La cuenta ha sido creada"
     else
-      flash.now[:alert] = "No se pudo crear la cuenta"
-      render 'new'
+      redirect_to new_monetary_account_url, alert2: "No se pudo crear la cuenta"
     end
   end
 
@@ -42,8 +41,7 @@ class MonetaryAccountsController < ApplicationController
     if @monetary_account.update(monetary_account_params)
       redirect_to monetary_accounts_url, notice: "Cuenta actualizada"
     else
-      flash.now[:alert] = "No se pudo actualizar la cuenta"
-      render 'edit'
+      redirect_to edit_monetary_account_url, alert2: "No se pudo actualizar la cuenta"
     end
   end
 
@@ -52,8 +50,7 @@ class MonetaryAccountsController < ApplicationController
     if @monetary_account.destroy
       redirect_to monetary_accounts_url, notice: "La cuenta ha sido eliminada"
     else
-      flash.now[:alert] = "No se pudo eliminar la cuenta"
-      render 'edit'
+      redirect_to edit_monetary_account_url, error2: "No se pudo eliminar la cuenta"
     end
   end
 

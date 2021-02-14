@@ -4,13 +4,15 @@
     <p class="primary-font profile-font"><%= @profile.biography %></p>
   </div>
   <div>
-    <div class="owl-carousel">
+    <div class="owl-carousel owl-theme">
       <% @publications.each do |publication| %>
-        <%= image_tag publication.image %>
-        <%= publication.subtitle %>
+        <div>
+          <%= image_tag(publication.image, class: "carousel-items") %>
+          <p class="carousel-item-subtitle"><%= publication.subtitle %></p>
+        </div>
       <% end %>
     </div>
-    <%= link_to appreciations_path, class: "second-bkgrnd new-publ-link" do %>
+    <%= link_to appreciations_path, class: "second-bkgrnd new-publ-link2" do %>
       <h2 class="primary-font new-publ-link-text">Agradecer</h2>
     <% end %>
   </div>

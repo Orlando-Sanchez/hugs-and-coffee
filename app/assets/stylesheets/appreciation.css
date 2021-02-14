@@ -1,3 +1,28 @@
+.carousel-item-subtitle {
+  width: 100%;
+  text-align: center;
+  padding-right: 65px;
+}
+
+.donor-field-field {
+  width: 278px;
+  height: 64px;
+  border: 1px solid #C4CDD5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+.coffee-img2 {
+  width: 64px;
+  height: 80.25px;
+  margin-bottom: 6px;
+}
+
+.donor-data-header {
+  margin-bottom: 15.7px;
+}
+
 .select-appreciation-wrapper {
   display: flex;
   justify-content: center;
@@ -11,12 +36,16 @@
   width: 100%;
 }
 
+.accounts-header-wrapper {
+  padding: 16px 16px 0px 16px;
+}
+
 .select-appreciation-header {
   font-weight: bold;
   color: #434242;
-  margin-bottom: 20px;
   font-size: 16px;
   line-height: 19px;
+  margin-bottom: 20px;
 }
 
 .select-header-container {
@@ -46,7 +75,7 @@
 .coffee-img {
   width: 64px;
   height: 80.25px;
-  margin-bottom: 8px;
+  margin-right: 12px;
 }
 
 .heart-img {
@@ -75,7 +104,8 @@
 }
 
 .coffee-main-wrapper {
-  padding: 24px 20px 72px 20px;
+  width: 350px;
+  padding: 24px 20px;
 }
 
 .thanks-container {
@@ -109,6 +139,7 @@
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15), 0px 1px 4px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   margin-bottom: 20px;
+  padding: 16px;
 }
 
 .coffee-form-part {
@@ -116,13 +147,14 @@
   flex-direction: column;
   box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
   border-radius: 5px;
-  padding: 16px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+  padding: 16px
 }
 
 .entity-data-wrapper {
-  padding: 16px 0;
-  border-bottom: 0.25px solid #C4CDD5;
+  padding: 16px 16px 8px 16px;
+  border-bottom: 0.4px solid #DAE1E7;
 }
 
 .entity-data {
@@ -131,6 +163,7 @@
 
 .multipliers-qty-wrapper {
   display: flex;
+  padding-top: 21px;
 }
 
 .multiplier-btn {
@@ -142,21 +175,75 @@
   box-sizing: border-box;
   padding: 12px;
   margin-right: 12.32px;
+  cursor: pointer;
 }
 
 .coffee-info {
   display: flex;
+  margin-bottom: 10px;
 }
 
 #coffee-price {
   margin-left: 4px
 }
 
+.selected-btn {
+  background-color: #EE4380
+}
+
+.selected-btn-text {
+  color: #FFFFFF
+}
+
+.carousel-items {
+  width: 256px;
+  height: 192px;
+  margin: 0 24px 8px 24px;
+}
+
 @media screen and (min-width: 736px) {
+  .carousel-items {
+    width: 326px;
+    height: 215.66px;
+    margin-bottom: 9.34px;
+  }
+
+  .donor-field-field {
+    width: 612px;
+    height: 80px;
+    margin-top: 12px;
+  }
+
+  .heart-img {
+    margin-bottom: 25px;
+  }
+
+  .coffee-img2 {
+    margin-bottom: 20px;
+  }
+
+  .accounts-header-wrapper {
+    padding: 24px 24px 16px 24px;
+  }
+
+  .donor-field {
+    width: 612px;
+  }
+
+  .donor-data-header {
+    margin-bottom: 32px;
+  }
+
+  .coffee-form-part {
+    margin-top: 24px;
+    margin-bottom: 32px;
+    padding: 24px 24px 0 24px
+  }
+
   .select-appreciation-header {
-    margin-bottom: 24px;
     font-size: 18px;
     line-height: 21px;
+    margin-bottom: 24px;
   }
   
   .appreciation-link {
@@ -179,7 +266,8 @@
   }
 
   .coffee-main-wrapper {
-    padding: 40px 38px 98px 38px;
+    width: 736px;
+    padding: 40px 38px;
   }
 
   .multiplier-btn {
@@ -187,13 +275,61 @@
     height: 58.12px;
     padding: 20px;
   }
+
+  .coffee-select-wrapper {
+    padding: 24px;
+    margin-bottom: 24px;
+
+  }
+
+  .coffee-info {
+    margin-bottom: 18px;
+  }
+
+  .coffee-img {
+    margin-right: 18px;
+  }
+
+  .entity-data-wrapper {
+    padding: 24px 24px 12px 24px;
+  }
+
+  .entity-data {
+    margin-bottom: 12px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .carousel-items {
+    width: 326px;
+    height: 215.66px;
+    margin: 0 24px 8px 24px;
+  }
+
+  .donor-field-field {
+    width: 737.08px
+  }
+
+  .heart-img {
+    margin-bottom: 33px;
+  }
+
+  .coffee-img2 {
+    margin-bottom: 25px;
+  }
+
+  .coffee-form-wrapper {
+    padding: 0 344px 71px 344px;
+  }
+
+  .entity-data {
+    margin-bottom: 18px;
+  }
+
   .select-appreciation-header {
-    margin-bottom: 32px;
     font-size: 24px;
     line-height: 28px;
+    margin-bottom: 32px;
   }
 
   .flex-space {
@@ -203,7 +339,7 @@
 
   .girl-img-wrapper {
     margin-top: 32px;
-    margin-bottom: 24px;
+    margin-bottom: 14px;
   }
 
   .instruction {
@@ -211,10 +347,26 @@
   }
 
   .coffee-main-wrapper {
-    padding: 48px 320px 71px 320px;
+    width: 100%;
+    padding: 48px 48px;
   }
 
   .entity-data-wrapper {
-    padding-bottom: 24px
+    padding-bottom: 14px;
+    padding-top: 24px
+  }
+
+  .coffee-img {
+    margin-right: 28px;
+  }
+
+  .coffee-select-wrapper {
+    padding: 32px;
+    margin-bottom: 32px;
+  }
+
+  .coffee-form-part {
+    padding: 32px 0 0 32px;
+    margin-bottom: 48px;
   }
 }

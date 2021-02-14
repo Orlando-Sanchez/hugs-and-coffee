@@ -15,6 +15,14 @@
     <%= javascript_pack_tag 'coffee_appreciation_form.js' %>
   </head>
   <body>
+    <% flash.each do |message_type, msg| %>
+      <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
+        <%= content_tag(:div, class: "vectormsg-wrapper") do %>
+          <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
+        <% end %>
+        <%= content_tag(:h6, msg, class: "primary-font") %>
+      <% end %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

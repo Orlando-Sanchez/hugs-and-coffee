@@ -86,6 +86,5 @@ let handleToggle = () => {
     handleNotification(errorMessage)
     hideDiv()
     buttonClickable.style.pointerEvents = "auto";
-    // Mostrar error en una notificacion
   })
 }

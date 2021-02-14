@@ -16,15 +16,7 @@
       <div class="profile-form-desktop">
         <%= render 'layouts/admin-menu-desktop'%>
         <div class="account-list-container primary-bkgrnd">
-          <div class="images-list-header">
-            <% flash.each do |message_type, msg| %>
-              <%= content_tag(:div, id: "msg-wrapper", class: "msg-wrapper #{message_type}") do %>
-                <%= content_tag(:div, class: "vectormsg-wrapper") do %>
-                  <%= image_tag("Vectormsg.svg", id: "vectormsgwrapper-img") %>                
-                <% end %>
-                <%= content_tag(:h6, msg, class: "primary-font") %>
-              <% end %>
-            <% end %>          
+          <div class="images-list-header">        
             <div class="profile-form-title primary-font">Listado de Cuentas</div>
             <div>
               <%= link_to new_monetary_account_path, class: "second-bkgrnd new-publ-link" do %>

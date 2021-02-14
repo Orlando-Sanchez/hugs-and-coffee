@@ -1,26 +1,91 @@
-document.addEventListener("turbolinks:load", function() {
-  console.log('estoy aca')
-  const coffeePrice = document.getElementById('coffee-price')
-  const totalAmount = document.getElementById('total-amount')
-  const b1 = document.getElementById('b1')
-  const b2 = document.getElementById('b2')
-  const b3 = document.getElementById('b3')
-  const b4 = document.getElementById('b4')
-  const coffeesQuantity = document.getElementById('coffees_quantity')
-  const q1 = document.getElementById('q1')
-  const q2 = document.getElementById('q2')
-  const q3 = document.getElementById('q3')
-  const q4 = document.getElementById('q4')
+var b1 = null;
+var b2 = null;
+var b3 = null;
+var b4 = null;
+var q1 = null;
+var q2 = null;
+var q3 = null;
+var q4 = null;
+var coffeePrice = null;
+var coffeesQuantity = null;
+var totalAmount = null;
 
-  const handleQuantityBtn = (q, price) => {
-    const result = q.value*price.value
-    totalAmount.value = result
-    coffeesQuantity.value = q.value
-    console.log(coffeesQuantity.value)
+document.addEventListener("turbolinks:load", function() {
+  b1 = document.getElementById('b1');
+  b2 = document.getElementById('b2');
+  b3 = document.getElementById('b3');
+  b4 = document.getElementById('b4');
+  q1 = document.getElementById('q1');
+  q2 = document.getElementById('q2');
+  q3 = document.getElementById('q3');
+  q4 = document.getElementById('q4');
+  coffeePrice = document.getElementById('coffee-price');
+  coffeesQuantity = document.getElementById('coffees-quantity');
+  totalAmount = document.getElementById('total-amount');
+
+  if (b2 && q2) {
+    b2.classList.add("selected-btn")
+    q2.classList.add("selected-btn-text")
+    coffeesQuantity.value = q2.textContent;
   }
 
-  b1.addEventListener('click', handleQuantityBtn(q1, coffeePrice))
-  b2.addEventListener('click', handleQuantityBtn(q2, coffeePrice))
-  b3.addEventListener('click', handleQuantityBtn(q3, coffeePrice))
-  b4.addEventListener('click', handleQuantityBtn(q4, coffeePrice))
+  if (b1) {
+    b1.addEventListener('click', function() {
+      b1.classList.add("selected-btn");
+      q1.classList.add("selected-btn-text")
+      b2.classList.remove("selected-btn");
+      q2.classList.remove("selected-btn-text");
+      b3.classList.remove("selected-btn");
+      q3.classList.remove("selected-btn-text");
+      b4.classList.remove("selected-btn");
+      q4.classList.remove("selected-btn-text");
+      totalAmount.textContent = q1.textContent*coffeePrice.textContent
+      coffeesQuantity.value = q1.textContent     
+    });
+  }
+
+  if (b2) {
+    b2.addEventListener('click', function() {
+      b2.classList.add("selected-btn");
+      q2.classList.add("selected-btn-text")
+      b1.classList.remove("selected-btn");
+      q1.classList.remove("selected-btn-text");
+      b3.classList.remove("selected-btn");
+      q3.classList.remove("selected-btn-text");
+      b4.classList.remove("selected-btn");
+      q4.classList.remove("selected-btn-text");
+      totalAmount.textContent = q2.textContent*coffeePrice.textContent
+      coffeesQuantity.value = q2.textContent
+    });
+  } 
+
+  if (b3) {
+    b3.addEventListener('click', function() {
+      b3.classList.add("selected-btn");
+      q3.classList.add("selected-btn-text")
+      b1.classList.remove("selected-btn");
+      q1.classList.remove("selected-btn-text");
+      b2.classList.remove("selected-btn");
+      q2.classList.remove("selected-btn-text");
+      b4.classList.remove("selected-btn");
+      q4.classList.remove("selected-btn-text");
+      totalAmount.textContent = q3.textContent*coffeePrice.textContent
+      coffeesQuantity.value = q3.textContent          
+    });
+  }
+
+  if (b4) {
+    b4.addEventListener('click', function() {
+      b4.classList.add("selected-btn");
+      q4.classList.add("selected-btn-text")
+      b1.classList.remove("selected-btn");
+      q1.classList.remove("selected-btn-text");
+      b2.classList.remove("selected-btn");
+      q2.classList.remove("selected-btn-text");
+      b3.classList.remove("selected-btn");
+      q3.classList.remove("selected-btn-text");
+      totalAmount.textContent = q4.textContent*coffeePrice.textContent
+      coffeesQuantity.value = q4.textContent          
+    });
+  }
 })
