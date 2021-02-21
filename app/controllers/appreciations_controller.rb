@@ -5,22 +5,31 @@ class AppreciationsController < ApplicationController
 
   def hug
     @profile = Profile.find(params[:id])
+    @appreciation = Appreciation.new(user_id: @profile.user.id)
+  end
+
+  def hug2
+    @profile = Profile.find(params[:id])
+    @appreciation = Appreciation.new(hug_appreciation_params)
   end
 
   def hug_create
-    @appreciation = Appreciation.new(hug_appreciation_params)
+    @profile = Profile.find(params[:id])
+    @user = User.where('id = ?', @profile.user.id).first
+    @appreciation = Appreciation.new(hug_appreciation_params2)
     @appreciation.appreciation_kind = 0
+    @appreciation.user = @user
   end
 
   def coffee
-    @profile = Profile.where('id = ?', params[:id]).first
+    @profile = Profile.find(params[:id])
     @appreciation = Appreciation.new(user_id: @profile.user.id)
     @monetary_accounts = MonetaryAccount.where(user_id: @profile.user.id)
     @multipliers = @profile.multipliers
   end
 
   def coffee_create
-    @profile = Profile.where('id = ?', params[:id]).first
+    @profile = Profile.find(params[:id])
     @user = User.where('id = ?', @profile.user.id).first
     @appreciation = Appreciation.new(coffee_appreciation_params)
     @appreciation.appreciation_kind = 1
@@ -40,5 +49,13 @@ class AppreciationsController < ApplicationController
 
   def coffee_appreciation_params
     params.require(:appreciation).permit(:donor_fullname, :donor_occupation, :donor_message, :coffees_quantity)
+  end
+
+  def hug_appreciation_params
+    params.require(:appreciation).permit(:hug_seconds)
+  end
+
+  def hug_appreciation_params2
+    params.require(:appreciation).permit(:donor_fullname, :donor_occupation, :donor_message, :hug_seconds)
   end
 end

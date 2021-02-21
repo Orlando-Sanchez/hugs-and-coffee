@@ -12,5 +12,6 @@ Rails.application.routes.draw do
   post 'profiles/:id/appreciations', to: 'appreciations#coffee_create', :as => 'coffee_create'
 
   get 'profiles/:id/appreciations/hug', to: 'appreciations#hug', :as => 'hug'
+  get 'profiles/:id/appreciations/hug2', to: 'appreciations#hug2', :as => 'hug2'
   get 'profiles/:id/appreciations/thanks', to: 'appreciations#thanks', :as => 'thanks'
 end

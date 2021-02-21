@@ -3,12 +3,9 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
   add_flash_types :alert2
 
-
   private
 
   def record_not_found
-    #falta notificacion
-    #de que esa pagina no existe
-    redirect_to(root_url)
+    redirect_to root_url, alert2: "Página no encontrada"
   end
 end

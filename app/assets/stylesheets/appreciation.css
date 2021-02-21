@@ -1,3 +1,71 @@
+.hug-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #434242;
+  margin: 20px 0 16px 0;
+}
+
+.hug-instruction {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  color: #434242;
+  margin-bottom: 24px;
+}
+
+.hug-img {
+  position: absolute;
+  /* left: 100px;
+  top: 197px; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 195.93px;
+  z-index: 2;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.filling-circle {
+  width: 100%;
+  height: 0%;
+  background-color: red;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  bottom: 0px;
+  position: absolute;
+}
+
+.filling-circle-animation {
+  height: 100%;
+  background-position: top left;
+  -webkit-transition: all 10s linear;
+  -moz-transition: all 10s linear;
+  -o-transition: all 10s linear;
+  transition: all 10s linear;
+}
+
+#main-hug-circle {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  width: 256px;
+  height: 256px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15), 0px 1px 4px rgba(0, 0, 0, 0.15);
+}
+
 .carousel-item-subtitle {
   width: 100%;
   text-align: center;
@@ -104,7 +172,7 @@
 }
 
 .coffee-main-wrapper {
-  width: 350px;
+  /* width: 350px; */
   padding: 24px 20px;
 }
 
@@ -196,12 +264,38 @@
 }
 
 .carousel-items {
+  cursor: pointer;
   width: 256px;
   height: 192px;
   margin: 0 24px 8px 24px;
 }
 
 @media screen and (min-width: 736px) {
+
+  .hug-instruction {
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 48px;
+  }
+
+  .hug-text {
+    font-size: 30px;
+    line-height: 36px;
+    margin-top: 24px
+  }
+
+  .hug-img {
+    width: 203.54px;
+    height: 265.86px;
+    /* left: 266.5px;
+    top: 237px; */
+  }
+
+  #main-hug-circle {
+    width: 347.38px;
+    height: 347.38px;
+  }
+
   .carousel-items {
     width: 326px;
     height: 215.66px;
@@ -266,7 +360,7 @@
   }
 
   .coffee-main-wrapper {
-    width: 736px;
+    /* width: 736px; */
     padding: 40px 38px;
   }
 
@@ -300,6 +394,30 @@
 }
 
 @media screen and (min-width: 1440px) {
+
+  .hug-instruction {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .hug-text {
+    font-size: 36px;
+    line-height: 43px;
+    margin: 32px 0 30px 0;
+  }
+
+  #main-hug-circle {
+    width: 480.84px;
+    height: 480.84px;
+  }
+
+  .hug-img {
+    width: 281.74px;
+    height: 368px;
+    /* left: 655px;
+    top: 295px */
+  }
+
   .carousel-items {
     width: 326px;
     height: 215.66px;
@@ -347,7 +465,7 @@
   }
 
   .coffee-main-wrapper {
-    width: 100%;
+    /* width: 100%; */
     padding: 48px 48px;
   }
 

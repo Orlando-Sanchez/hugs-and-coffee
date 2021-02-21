@@ -10,6 +10,7 @@ require("@rails/activestorage").start()
 require("channels")
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+import dropify from './dropify';
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -18,13 +19,21 @@ import 'owl.carousel';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+ 
 
-document.addEventListener("turbolinks:load", function() {
+  document.addEventListener("turbolinks:load", function() {
+  $('.dropify').dropify({
+    messages: {
+      'default': 'Arrastra un archivo para cargar.',
+      'replace': 'Arrastra un archivo para reemplazar.',
+      'remove':  'Remover',
+      'error':   'Ooops, ha ocurrido un error.'
+    }
+  });
   $('.owl-carousel').owlCarousel({
     stagePadding: 50,
     loop: true,
     rtl:true,    
-    autoPlay: 1000,
     margin:10,
     responsive:{
       0:{

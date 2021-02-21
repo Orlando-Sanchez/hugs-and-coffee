@@ -12,6 +12,13 @@
         </div>
       <% end %>
     </div>
+    <div class="owl-carousel owl-theme">
+      <% @appreciations.each do |publication| %>
+        <div>
+          <p class="carousel-item-subtitle"></p>
+        </div>
+      <% end %>
+    </div>
     <%= link_to appreciations_path, class: "second-bkgrnd new-publ-link2" do %>
       <h2 class="primary-font new-publ-link-text">Agradecer</h2>
     <% end %>

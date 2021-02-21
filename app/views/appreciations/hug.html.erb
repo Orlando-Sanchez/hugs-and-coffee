@@ -1,7 +1,28 @@
 <%= render 'layouts/profile_header' %>
+<div class="coffee-main-wrapper primary-bkgrnd">
   <div class= "back-wrapper">
     <%= link_to appreciations_path do%>
       <%= image_tag("Vector.svg", class: "vector-img") %>
       <span class= "back primary-font">Atrás</span>
     <% end %>
   </div>
+  <div class="select-header-container">
+    <span class="select-appreciation-header primary-font">Formas de reconocer a <%=@profile.fullname%></span>
+  </div>
+  <div class="circle-container">
+    <div class="third-bkgrnd" id="main-hug-circle">
+      <div class="filling-circle" id="filling-circle"></div>
+      <%= image_tag("hug.svg", class: "hug-img") %>
+    </div>
+  </div>
+  <div>
+    <p class="second-font hug-text">Abrazo de <span class="second-font"></span></p>
+    <P class="primary-font hug-instruction">Mientras más tiempo lo presiones, mayor será el abrazo.</p>
+  </div>
+  <%= form_with model: @appreciation do |f| %>
+    <%= f.hidden_field :coffees_quantity, id: "coffees-quantity"%> 
+    <div class="submit-btn-wrapper">
+      <%= f.submit "Siguiente", class: "submit primary-font second-bkgrnd" %>
+    </div>
+  <% end %> 
+</div>

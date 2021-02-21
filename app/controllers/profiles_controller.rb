@@ -27,7 +27,9 @@ class ProfilesController < ApplicationController
 
   def show
     @profile = Profile.find(params[:id])
+    @user = User.where('id = ?', @profile.user.id).first
     @publications = @profile.publications.all
+    @appreciations = @user.appreciations.all
   end
   
   def edit
