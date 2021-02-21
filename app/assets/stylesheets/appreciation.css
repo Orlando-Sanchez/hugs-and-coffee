@@ -36,6 +36,14 @@
   position: relative;
 }
 
+.full-height {
+  height: 100%;
+}
+
+.empty-height {
+  height: 0;
+}
+
 .filling-circle {
   width: 100%;
   height: 0%;
@@ -51,10 +59,20 @@
 .filling-circle-animation {
   height: 100%;
   background-position: top left;
-  -webkit-transition: all 10s linear;
-  -moz-transition: all 10s linear;
-  -o-transition: all 10s linear;
-  transition: all 10s linear;
+  animation: animated-height 10s linear;
+  -webkit-transition: animated-height 10s linear;
+  -moz-transition: animated-height 10s linear;
+  -o-transition: animated-height 10s linear;
+  transition: animated-height 10s linear;
+}
+
+@keyframes animated-height {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
 }
 
 #main-hug-circle {

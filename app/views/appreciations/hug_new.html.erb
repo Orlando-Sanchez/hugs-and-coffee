@@ -1,0 +1,35 @@
+<%= render 'layouts/profile_header' %>
+<div class="coffee-main-wrapper primary-bkgrnd">
+  <div class= "back-wrapper">
+    <%= link_to hug_animation_path do%>
+      <%= image_tag("Vector.svg", class: "vector-img") %>
+      <span class= "back primary-font">Atrás</span>
+    <% end %>
+  </div>
+  <div class="coffee-form-wrapper">
+    <%= form_with(url: hug_create_path) do |f| %>
+      <div class="coffee-form-part third-bkgrnd">
+        <p class="primary-font select-appreciation-header donor-data-header">Tus datos</p>
+        <div class="field">
+          <%= f.label :donor_fullname, 'Nombre', class: "label primary-font" %>
+          <br>
+          <%= f.text_field :donor_fullname, class: 'field-field third-bkgrnd donor-field' %>
+        </div> 
+        <div class="field">
+          <%= f.label :donor_occupation, 'Ocupación', class: "label primary-font" %>
+          <br>
+          <%= f.text_field :donor_occupation, class: 'field-field third-bkgrnd donor-field' %>
+        </div>     
+        <div class="field">
+          <%= f.label :donor_message, 'Mensaje de agradecimiento:', class: "label primary-font" %>
+          <br>
+          <%= f.text_area :donor_message, class: 'donor-field-field third-bkgrnd primary-font' %>
+        </div>
+        <%= f.hidden_field :hug_seconds, id: "hug_seconds", value: @appreciation.hug_seconds %>  
+      </div>
+      <div class="submit-btn-wrapper">
+        <%= f.submit "Enviar", class: "submit primary-font second-bkgrnd" %>
+      </div>
+    <% end %>
+  </div>
+</div>

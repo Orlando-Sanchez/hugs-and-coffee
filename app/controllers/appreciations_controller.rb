@@ -3,22 +3,24 @@ class AppreciationsController < ApplicationController
     @profile = Profile.find(params[:id])
   end
 
-  def hug
+  def hug_animation
     @profile = Profile.find(params[:id])
-    @appreciation = Appreciation.new(user_id: @profile.user.id)
   end
 
-  def hug2
+  def hug_new
     @profile = Profile.find(params[:id])
     @appreciation = Appreciation.new(hug_appreciation_params)
   end
 
   def hug_create
-    @profile = Profile.find(params[:id])
-    @user = User.where('id = ?', @profile.user.id).first
-    @appreciation = Appreciation.new(hug_appreciation_params2)
-    @appreciation.appreciation_kind = 0
-    @appreciation.user = @user
+    @profile = Profile.where('id = ?', params[:id]).first
+    @appreciation = Appreciation.new(hug_appreciation_params_create)
+    @appreciation.assign_attributes(user_id: @profile.user_id, appreciation_kind: :hug)
+    if @appreciation.save
+      redirect_to thanks_url
+    else
+      redirect_to hug_new_url, alert2: "No se pudo crear el agradecimiento"
+    end
   end
 
   def coffee
@@ -52,10 +54,10 @@ class AppreciationsController < ApplicationController
   end
 
   def hug_appreciation_params
-    params.require(:appreciation).permit(:hug_seconds)
+    params.permit(:hug_seconds)
   end
 
-  def hug_appreciation_params2
-    params.require(:appreciation).permit(:donor_fullname, :donor_occupation, :donor_message, :hug_seconds)
+  def hug_appreciation_params_create
+    params.permit(:donor_fullname, :donor_occupation, :donor_message, :hug_seconds)
   end
 end

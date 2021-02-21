@@ -12,15 +12,15 @@
   <div class="circle-container">
     <div class="third-bkgrnd" id="main-hug-circle">
       <div class="filling-circle" id="filling-circle"></div>
-      <%= image_tag("hug.svg", class: "hug-img") %>
+      <%= image_tag("hug.svg", class: "hug-img", id: 'hug-img') %>
     </div>
   </div>
   <div>
-    <p class="second-font hug-text">Abrazo de <span class="second-font"></span></p>
+    <p class="second-font hug-text">Abrazo de <span class="second-font" id="timer-count">0.0</span> segundos</p>
     <P class="primary-font hug-instruction">Mientras más tiempo lo presiones, mayor será el abrazo.</p>
   </div>
-  <%= form_with model: @appreciation do |f| %>
-    <%= f.hidden_field :coffees_quantity, id: "coffees-quantity"%> 
+  <%= form_with(url: hug_new_path, local: true, method: 'GET') do |f| %>
+    <%= f.hidden_field :hug_seconds, id: "hug_seconds"%> 
     <div class="submit-btn-wrapper">
       <%= f.submit "Siguiente", class: "submit primary-font second-bkgrnd" %>
     </div>
