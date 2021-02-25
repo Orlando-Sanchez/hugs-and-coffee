@@ -1,14 +1,14 @@
 class AppreciationsController < ApplicationController
   def select
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
   end
 
   def hug_animation
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
   end
 
   def hug_new
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
     @appreciation = Appreciation.new(hug_appreciation_params)
   end
 
@@ -24,18 +24,16 @@ class AppreciationsController < ApplicationController
   end
 
   def coffee
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
     @appreciation = Appreciation.new(user_id: @profile.user.id)
     @monetary_accounts = MonetaryAccount.where(user_id: @profile.user.id)
     @multipliers = @profile.multipliers
   end
 
   def coffee_create
-    @profile = Profile.find(params[:id])
-    @user = User.where('id = ?', @profile.user.id).first
+    @profile = Profile.where('id = ?', params[:id]).first
     @appreciation = Appreciation.new(coffee_appreciation_params)
-    @appreciation.appreciation_kind = 1
-    @appreciation.user = @user
+    @appreciation.assign_attributes(user_id: @profile.user_id, appreciation_kind: :coffee)
     if @appreciation.save
       redirect_to thanks_url
     else
@@ -44,7 +42,7 @@ class AppreciationsController < ApplicationController
   end
 
   def thanks
-    @profile = Profile.find(params[:id]) 
+    @profile = Profile.where('id = ?', params[:id]).first
   end
 
   private

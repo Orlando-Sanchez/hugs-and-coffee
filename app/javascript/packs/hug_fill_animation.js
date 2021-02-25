@@ -1,39 +1,43 @@
-var hugSecondsField = null;
 document.addEventListener("turbolinks:load", function() {
-  console.log('hey')
   const mainCircle = document.getElementById("main-hug-circle");
-  const totalHeight = mainCircle.offsetHeight;
   const fillingCircle = document.getElementById("filling-circle");
   const hugImg = document.getElementById("hug-img");
-  const timerCount = document.getElementById("timer-count");
+  const timerSeconds = document.getElementById("timer-seconds");
+  var heightPercentage = null;
   var timer = 0;
-
-
-  hugImg.addEventListener('touchstart', function (e) {
-      e.preventDefault();
-  });
-
-  hugImg.addEventListener('click', function (e) {
-    e.preventDefault();
-  });
+  var interval = null;
+  var hugSecondsField = null;
+  var totalHeight = null;
 
   const handleUpAction = function() {
-    const heightPercentage = (fillingCircle.offsetHeight * 100) / totalHeight
-    timer = Math.round((parseFloat(heightPercentage / 10) + Number.EPSILON) * 100) / 100
-    timerCount.textContent = timer
+    clearInterval(interval);
     hugSecondsField.value = timer;
-    fillingCircle.style.height = `${heightPercentage}%`;
     fillingCircle.classList.remove("filling-circle-animation");
   }
 
   const handleDownAction = function() {
-    timerCount.textContent = `0.0`;
+    timerSeconds.textContent = `0.0`;
     fillingCircle.style.removeProperty("height");
     hugSecondsField.value = 0;
     fillingCircle.classList.add("filling-circle-animation");
+    interval = setInterval(() => {
+      heightPercentage = (fillingCircle.offsetHeight * 100) / totalHeight
+      fillingCircle.style.height = `${heightPercentage}%`;
+      timer = Math.round(heightPercentage) / 10
+      timerSeconds.textContent = timer
+    }, 10);
   }
 
   if (mainCircle) {
+    totalHeight = mainCircle.offsetHeight;
+    hugImg.addEventListener('touchstart', function (e) {
+      e.preventDefault();
+    });
+
+    hugImg.addEventListener('click', function (e) {
+      e.preventDefault();
+    });
+
     hugSecondsField = document.getElementById('hug_seconds'); 
     mainCircle.addEventListener('touchstart', handleDownAction)
     mainCircle.addEventListener('mousedown', handleDownAction)

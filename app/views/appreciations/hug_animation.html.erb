@@ -16,7 +16,11 @@
     </div>
   </div>
   <div>
-    <p class="second-font hug-text">Abrazo de <span class="second-font" id="timer-count">0.0</span> segundos</p>
+    <div class="hug-text-wrapper">
+      <p class="second-font hug-text">Abrazo de</p>
+      <div class="timer-seconds-wrapper"><span class="second-font hug-text" id="timer-seconds">0.0</span></div>
+      <p class="second-font hug-text">segundo(s)</p>
+    </div>
     <P class="primary-font hug-instruction">Mientras más tiempo lo presiones, mayor será el abrazo.</p>
   </div>
   <%= form_with(url: hug_new_path, local: true, method: 'GET') do |f| %>
