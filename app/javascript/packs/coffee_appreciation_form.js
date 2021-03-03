@@ -39,7 +39,7 @@ document.addEventListener("turbolinks:load", function() {
       q3.classList.remove("selected-btn-text");
       b4.classList.remove("selected-btn");
       q4.classList.remove("selected-btn-text");
-      totalAmount.textContent = q1.textContent*coffeePrice.textContent
+      totalAmount.textContent = Math.floor((q1.textContent*coffeePrice.textContent)*100) / 100
       coffeesQuantity.value = q1.textContent     
     });
   }
@@ -54,7 +54,7 @@ document.addEventListener("turbolinks:load", function() {
       q3.classList.remove("selected-btn-text");
       b4.classList.remove("selected-btn");
       q4.classList.remove("selected-btn-text");
-      totalAmount.textContent = q2.textContent*coffeePrice.textContent
+      totalAmount.textContent = Math.floor((q2.textContent*coffeePrice.textContent)*100) / 100
       coffeesQuantity.value = q2.textContent
     });
   } 
@@ -69,7 +69,7 @@ document.addEventListener("turbolinks:load", function() {
       q2.classList.remove("selected-btn-text");
       b4.classList.remove("selected-btn");
       q4.classList.remove("selected-btn-text");
-      totalAmount.textContent = q3.textContent*coffeePrice.textContent
+      totalAmount.textContent = Math.floor((q3.textContent*coffeePrice.textContent)*100) / 100
       coffeesQuantity.value = q3.textContent          
     });
   }
@@ -84,7 +84,7 @@ document.addEventListener("turbolinks:load", function() {
       q2.classList.remove("selected-btn-text");
       b3.classList.remove("selected-btn");
       q3.classList.remove("selected-btn-text");
-      totalAmount.textContent = q4.textContent*coffeePrice.textContent
+      totalAmount.textContent = Math.floor((q4.textContent*coffeePrice.textContent)*100) / 100
       coffeesQuantity.value = q4.textContent          
     });
   }

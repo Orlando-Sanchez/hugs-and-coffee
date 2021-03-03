@@ -26,7 +26,7 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
     @user = User.where('id = ?', @profile.user.id).first
     @publications = @profile.publications.all
     @appreciations = @user.appreciations.all
@@ -50,7 +50,7 @@ class ProfilesController < ApplicationController
   end
 
   def toggle_profile
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
     result = @profile.update(is_published: params[:is_published])
     render json: { profile: @profile, result: result }
   end
@@ -62,7 +62,7 @@ class ProfilesController < ApplicationController
   end
 
   def is_published
-    @profile = Profile.find(params[:id])
+    @profile = Profile.where('id = ?', params[:id]).first
     redirect_to(root_url) unless @profile.is_published
   end
 end

@@ -16,7 +16,7 @@
         <p class="primary-font subtitle-description">Comparte imágenes que conecten con las personas y muestren a que te dedicas.</p>
       </div>
       <div class="dropify-customized">
-        <%= f.file_field :image, class: 'dropify', id: "input-file-now" %>
+        <%= f.file_field :image, class: 'dropify', id: "input-file-now", data: { allowed_file_extensions: 'pdf png svg', default_file: (url_for(@publication.image) if @publication.image.present?) } %>
       </div>
     </div>
   </div>

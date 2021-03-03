@@ -1,3 +1,7 @@
+.profile-menu-inner {
+  height: 1081px;
+}
+
 .admin-menu-desktop {
   display: none;
   background: #F8F8F8;
@@ -21,11 +25,10 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 350px;
   height: 1017px;
   background: #F8F8F8;
   padding: 0px 20px 79px 20px;
-  border-left: 0.5px solid #C4CDD5
+
 }
 
 #profile-form-header {
@@ -134,7 +137,6 @@
   width: 310px;
 }
 
-
 .submit-btn-break {
   border-top: 0.5px solid #C4CDD5;
   margin-top: 24px;
@@ -152,7 +154,6 @@
 
   .profile-form-container {
     height: 1104px;
-    width: 736px;
     padding: 0 38px 45px 38px;
   }
 
@@ -229,9 +230,10 @@
   .admin-menu-desktop {
     display: flex;
     flex-direction: column;
-    width: 255px;
+    width: 256px;
     padding-left: 48px;
     padding-top: 32px;
+    border-right: 0.5px solid #C4CDD5
   }
 
   .admin-text-black {
@@ -266,7 +268,6 @@
 
   .profile-form-container {
     height: 100%;
-    width: 84%;
     padding: 5px 70px 62px 70px;
   }
 

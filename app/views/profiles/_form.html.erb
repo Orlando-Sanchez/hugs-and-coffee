@@ -38,7 +38,7 @@
     </ul> 
   </div>
   <div class="dropify-customized">
-    <%= f.file_field :avatar, class: 'dropify', id: "input-file-now", data: { max_file_size: '2M', allowed_file_extensions: 'pdf png svg', default_file: url_for(@profile.avatar)}%>  
+    <%= f.file_field :avatar, class: 'dropify', id: "input-file-now", data: { max_file_size: '2M', allowed_file_extensions: 'pdf png svg', default_file: (url_for(@profile.avatar) if @profile.avatar.attached?) }%>  
   </div>
   <div class="submit-btn-wrapper submit-btn-break profile-submit-wrapper">
     <%= f.submit "Guardar", class: "submit primary-font second-bkgrnd" %>

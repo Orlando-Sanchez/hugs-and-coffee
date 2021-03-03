@@ -34,7 +34,7 @@ import dropify from './dropify';
     stagePadding: 50,
     loop: true,
     rtl:true,    
-    margin:10,
+    margin:24,
     responsive:{
       0:{
         items:1

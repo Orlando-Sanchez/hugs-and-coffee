@@ -97,11 +97,6 @@
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15), 0px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
-.carousel-item-subtitle {
-  width: 100%;
-  text-align: center;
-  padding-right: 65px;
-}
 
 .donor-field-field {
   width: 278px;
@@ -136,7 +131,7 @@
 }
 
 .accounts-header-wrapper {
-  padding: 16px 16px 0px 16px;
+  padding: 16px;
 }
 
 .select-appreciation-header {
@@ -144,7 +139,6 @@
   color: #434242;
   font-size: 16px;
   line-height: 19px;
-  margin-bottom: 20px;
 }
 
 .select-header-container {
@@ -294,13 +288,6 @@
   color: #FFFFFF
 }
 
-.carousel-items {
-  cursor: pointer;
-  width: 256px;
-  height: 192px;
-  margin: 0 24px 8px 24px;
-}
-
 @media screen and (min-width: 736px) {
 
   .timer-seconds-wrapper {
@@ -332,12 +319,6 @@
     height: 347.38px;
   }
 
-  .carousel-items {
-    width: 326px;
-    height: 215.66px;
-    margin-bottom: 9.34px;
-  }
-
   .donor-field-field {
     width: 612px;
     height: 80px;
@@ -353,7 +334,7 @@
   }
 
   .accounts-header-wrapper {
-    padding: 24px 24px 16px 24px;
+    padding: 24px 24px 8px 24px;
   }
 
   .donor-field {
@@ -373,7 +354,6 @@
   .select-appreciation-header {
     font-size: 18px;
     line-height: 21px;
-    margin-bottom: 24px;
   }
   
   .appreciation-link {
@@ -431,6 +411,10 @@
 
 @media screen and (min-width: 1440px) {
 
+  .accounts-header-wrapper {
+    width: 800px;
+  }
+
   .timer-seconds-wrapper {
     margin: 32px 0 30px 0;
     width: 65px;
@@ -459,11 +443,6 @@
     top: 295px */
   }
 
-  .carousel-items {
-    width: 326px;
-    height: 215.66px;
-    margin: 0 24px 8px 24px;
-  }
 
   .donor-field-field {
     width: 737.08px
@@ -478,7 +457,7 @@
   }
 
   .coffee-form-wrapper {
-    padding: 0 344px 71px 344px;
+    padding: 0 272px 71px 272px;
   }
 
   .entity-data {
@@ -488,7 +467,6 @@
   .select-appreciation-header {
     font-size: 24px;
     line-height: 28px;
-    margin-bottom: 32px;
   }
 
   .flex-space {
@@ -520,11 +498,13 @@
   }
 
   .coffee-select-wrapper {
+    width: 800px;
     padding: 32px;
     margin-bottom: 32px;
   }
 
   .coffee-form-part {
+    width: 800px;
     padding: 32px 0 0 32px;
     margin-bottom: 48px;
   }

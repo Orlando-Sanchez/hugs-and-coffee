@@ -29,9 +29,9 @@ class PublicationsController < ApplicationController
   end
 
   def edit
-    if current_user.profile.publications.find(params[:id]).present?
+    if current_user.profile.publications.where('id = ?', params[:id]).first.present?
       @profile = current_user.profile
-      @publication = @profile.publications.find(params[:id])
+      @publication = @profile.publications.where('id = ?', params[:id]).first
     else 
       redirect_to root_url
     end
@@ -47,7 +47,7 @@ class PublicationsController < ApplicationController
   end
 
   def destroy
-    @publication = Publication.find(params[:id])
+    @publication = Publication.where('id = ?', params[:id]).first
     if @publication.destroy
       redirect_to publications_url, notice: "La publicación ha sido eliminada"
     else

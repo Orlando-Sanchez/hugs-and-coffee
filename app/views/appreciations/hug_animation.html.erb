@@ -21,7 +21,7 @@
       <div class="timer-seconds-wrapper"><span class="second-font hug-text" id="timer-seconds">0.0</span></div>
       <p class="second-font hug-text">segundo(s)</p>
     </div>
-    <P class="primary-font hug-instruction">Mientras más tiempo lo presiones, mayor será el abrazo.</p>
+    <P class="primary-font hug-instruction">Mientras más tiempo presiones el círculo, mayor será el abrazo.</p>
   </div>
   <%= form_with(url: hug_new_path, local: true, method: 'GET') do |f| %>
     <%= f.hidden_field :hug_seconds, id: "hug_seconds"%> 

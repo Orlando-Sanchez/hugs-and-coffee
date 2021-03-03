@@ -1,7 +1,6 @@
 document.addEventListener("turbolinks:load", function() {
   const mainCircle = document.getElementById("main-hug-circle");
   const fillingCircle = document.getElementById("filling-circle");
-  const hugImg = document.getElementById("hug-img");
   const timerSeconds = document.getElementById("timer-seconds");
   var heightPercentage = null;
   var timer = 0;
@@ -29,16 +28,16 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   if (mainCircle) {
+    hugSecondsField = document.getElementById('hug_seconds');
+    hugSecondsField.value = 10
     totalHeight = mainCircle.offsetHeight;
-    hugImg.addEventListener('touchstart', function (e) {
+    mainCircle.addEventListener('touchstart', function (e) {
       e.preventDefault();
     });
-
-    hugImg.addEventListener('click', function (e) {
+    mainCircle.addEventListener('click', function (e) {
       e.preventDefault();
     });
-
-    hugSecondsField = document.getElementById('hug_seconds'); 
+ 
     mainCircle.addEventListener('touchstart', handleDownAction)
     mainCircle.addEventListener('mousedown', handleDownAction)
 

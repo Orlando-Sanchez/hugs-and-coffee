@@ -28,16 +28,16 @@ class MonetaryAccountsController < ApplicationController
   end
 
   def edit
-    if current_user.monetary_accounts.find(params[:id]).present?
+    if current_user.monetary_accounts.where('id = ?', params[:id]).first.present?
       @profile = current_user.profile
-      @monetary_account = current_user.monetary_accounts.find(params[:id])
+      @monetary_account = current_user.monetary_accounts.where('id = ?', params[:id]).first
     else 
       redirect_to root_url
     end
   end
 
   def update
-    @monetary_account = current_user.monetary_accounts.find(params[:id])
+    @monetary_account = current_user.monetary_accounts.where('id = ?', params[:id]).first
     if @monetary_account.update(monetary_account_params)
       redirect_to monetary_accounts_url, notice: "Cuenta actualizada"
     else
@@ -46,7 +46,7 @@ class MonetaryAccountsController < ApplicationController
   end
 
   def destroy
-    @monetary_account = MonetaryAccount.find(params[:id])
+    @monetary_account = MonetaryAccount.where('id = ?', params[:id]).first
     if @monetary_account.destroy
       redirect_to monetary_accounts_url, notice: "La cuenta ha sido eliminada"
     else

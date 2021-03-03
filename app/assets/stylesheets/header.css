@@ -100,6 +100,8 @@
 }
 
 #initials-wrapper {
+  display: flex;
+  justify-content: center;
   width: 40px;
   height: 40px;
   border: 2px solid #EE4380;
@@ -145,7 +147,6 @@
   display: none;
   position: absolute;
   width: 290px;
-  height: 100%;
   background: #FFFFFF;
   z-index: 1;
 }

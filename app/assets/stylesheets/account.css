@@ -181,7 +181,7 @@
   }
 
   .acc-items {
-    width: 980px;
+    width: 952px;
     padding-top: 40px;
   }
 
@@ -195,9 +195,8 @@
   }
 
   .account-list-container {
-    width: 84%;
+    width: 82.22%;
     padding: 0 70px 57px 71px;
-    border-left: 0.5px solid #C4CDD5
   }
 
   .account-form-container {

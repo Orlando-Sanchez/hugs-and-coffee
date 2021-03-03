@@ -14,6 +14,9 @@
     <div><p class="primary-font">Total: <%= @profile.currency_sign %> <span id="total-amount" class="primary-font"></span></p></div>
   </div>
   <div class="third-bkgrnd accounts-header-wrapper"><p class="primary-font select-appreciation-header">Cuentas de <%= @profile.fullname %></p></div>
+  <% if !@monetary_accounts.any? %>
+    <div class="entity-data-wrapper third-bkgrnd"><p class="primary-font entity-data">El usuario no ha agregado ninguna cuenta aún.</p></div>
+  <% end %>
   <% @monetary_accounts.each do |monetary_account| %>
     <div class="entity-data-wrapper third-bkgrnd">
       <% if monetary_account.entity.present? %>

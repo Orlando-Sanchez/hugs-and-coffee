@@ -53,7 +53,7 @@ const handleNotification = (message) => {
 let handleToggle = () => {
   console.log('click');
   buttonClickable.style.pointerEvents = "none";
-  var url = 'http://127.0.0.1:3000/toggle_profile';
+  var url = 'http://192.168.1.113:3000/toggle_profile';
   var data = { id: profileId, is_published: !isPublished };
   fetch(url, {
     method: 'PUT', // or 'PUT'
