@@ -1,3 +1,6 @@
+.profile-form-desktop {
+}
+
 .profile-menu-inner {
   height: 1081px;
 }
@@ -8,11 +11,11 @@
 }
 
 .profile-edit-view {
-  height: 1081px;
+  height: 100%;
 }
 
 #profile-admin-dark {
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
 
@@ -25,7 +28,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 1017px;
   background: #F8F8F8;
   padding: 0px 20px 79px 20px;
 
@@ -149,11 +151,9 @@
 
 @media screen and (min-width: 736px) {
  .profile-edit-view {
-    height: 1168px;
   }
 
   .profile-form-container {
-    height: 1104px;
     padding: 0 38px 45px 38px;
   }
 
@@ -217,14 +217,12 @@
 
 @media screen and (min-width: 1440px) { 
   .profile-edit-view {
-    height: 880px;
     width: 100%;
   }
 
   .profile-form-desktop {
     display: flex;
     width: 100%;
-    height: 868px;
   }
 
   .admin-menu-desktop {
@@ -267,7 +265,6 @@
   }
 
   .profile-form-container {
-    height: 100%;
     padding: 5px 70px 62px 70px;
   }
 

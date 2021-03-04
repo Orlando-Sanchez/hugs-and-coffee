@@ -149,6 +149,7 @@
   width: 290px;
   background: #FFFFFF;
   z-index: 1;
+  height: 100vh;
 }
 
 .profile-menu-header {

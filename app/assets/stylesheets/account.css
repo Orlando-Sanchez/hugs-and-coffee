@@ -1,7 +1,8 @@
 .account-list-container {
   display: flex;
   flex-direction: column;
-  padding: 0 20px 57px 20px;
+  padding: 0 20px;
+  height: 100vh;
 }
 
 .acc-list-item {
@@ -148,7 +149,7 @@
 
   .account-list-container {
     height: 960px;
-    padding: 0 38px 57px 38px;
+    padding: 0 38px;
   }
 
   .account-form-container {
@@ -196,7 +197,7 @@
 
   .account-list-container {
     width: 82.22%;
-    padding: 0 70px 57px 71px;
+    padding: 0 70px 0 71px;
   }
 
   .account-form-container {
