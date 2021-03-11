@@ -56,7 +56,7 @@
   display: flex;
   justify-content: space-between;
   height: 64px; 
-  padding: 24px 142.19px 24px 20px;
+  padding: 24px 126px 24px 20px;
 }
 
 .big-logo-font {
@@ -223,7 +223,7 @@
   .admin-header {
     width: 100%;
     padding-left: 37px;
-    padding-right: 299px;
+    padding-right: 313px;
   }
 
   .big-logo-font {
@@ -232,7 +232,19 @@
   }
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (min-width: 1024px) {
+  .admin-header {
+    padding-right: 440px;
+  }
+
+  .profile-form-small {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width: 1439px) {
   #menu-icon {
     width: 24px;
     height: 16px;

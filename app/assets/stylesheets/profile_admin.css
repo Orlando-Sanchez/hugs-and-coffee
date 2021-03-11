@@ -12,10 +12,15 @@
 
 .profile-edit-view {
   height: 100%;
+  position: relative;
+}
+
+#profile-menu {
+  height: 100%;
 }
 
 #profile-admin-dark {
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -29,8 +34,8 @@
   justify-content: center;
   flex-direction: column;
   background: #F8F8F8;
-  padding: 0px 20px 79px 20px;
-
+  padding: 0px 5px 79px 5px;
+  min-height: 100vh;
 }
 
 #profile-form-header {

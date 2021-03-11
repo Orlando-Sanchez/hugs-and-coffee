@@ -1,4 +1,4 @@
-<div>
+<div class="profile-edit-view">
   <div id="profile-menu">
     <div class="profile-menu-header">
       <%= link_to @profile do %>
@@ -19,20 +19,11 @@
           <div class="publication-form-header">
             <div class="profile-form-title primary-font">Crear imágenes</div>
           </div>
-          <%= render 'form', object: @publication %>
+          <div class="form-wrapper">
+            <%= render 'form', object: @publication %>
+          </div>   
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-

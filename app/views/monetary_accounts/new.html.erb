@@ -1,4 +1,4 @@
-<div>
+<div class="profile-edit-view">
   <div id="profile-menu">
     <div class="profile-menu-header">
       <%= link_to @profile do %>
@@ -19,7 +19,9 @@
           <div class="publication-form-header">
             <div class="profile-form-title primary-font">Crear cuenta</div>
           </div>
-          <%= render 'form', object: @monetary_account %>       
+          <div class="form-wrapper">
+            <%= render 'form', object: @monetary_account %>       
+          </div>
         </div>
       </div>
     </div>

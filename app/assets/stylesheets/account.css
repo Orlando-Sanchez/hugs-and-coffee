@@ -175,6 +175,12 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .acc-items {
+    width: 770px;
+  }
+}
+
 @media screen and (min-width: 1440px) {
 
   .acc-data {

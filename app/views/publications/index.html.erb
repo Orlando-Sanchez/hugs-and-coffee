@@ -1,4 +1,4 @@
-<div>
+<div class="profile-edit-view">
   <div id="profile-menu">
     <div class="profile-menu-header">
       <%= link_to @profile do %>
@@ -25,7 +25,7 @@
             </div>
           </div>
           <% if @publications.any? %>
-           <div class="image-list-wrapper third-bkgrnd">
+            <div class="image-list-wrapper third-bkgrnd">
             <% @publications.each do |publication| %>
               <%= link_to edit_publication_path(id: publication.id) do %>
                 <%= image_tag publication.image, class: "publ-image-link" %>
@@ -38,4 +38,3 @@
     </div>
   </div>
 </div>
- 

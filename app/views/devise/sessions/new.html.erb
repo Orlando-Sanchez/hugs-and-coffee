@@ -15,12 +15,12 @@
 
           <div class="field">
             <%= f.label :email, 'Correo electrónico', class: "label primary-font" %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field third-bkgrnd" %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field field-fix third-bkgrnd" %>
           </div>
 
           <div class="field">
             <%= f.label :password, 'Contraseña', class: "label primary-font" %><br />
-            <%= f.password_field :password, autocomplete: "current-password", class: "field-field third-bkgrnd" %>
+            <%= f.password_field :password, autocomplete: "current-password", class: "field-field field-fix third-bkgrnd" %>
           </div>
         </div> 
         <div class= "submit-btn-wrapper">
@@ -31,16 +31,3 @@
   </div>
 </div>
 <%= render "devise/shared/links" %>
-
-
-<%
-=begin%>
-  
-    <% if devise_mapping.rememberable? %>
-      <div class="field">
-        <%= f.check_box :remember_me %>
-        <%= f.label :remember_me, 'Recordarme' %>
-      </div>
-    <% end %> 
-<%
-=end%>

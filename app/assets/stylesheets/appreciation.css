@@ -409,6 +409,13 @@
   }
 }
 
+@media screen and (min-width: 1024px) {
+  .coffee-main-wrapper {
+    padding: 40px 166px;
+  }
+}
+
+
 @media screen and (min-width: 1440px) {
 
   .accounts-header-wrapper {
