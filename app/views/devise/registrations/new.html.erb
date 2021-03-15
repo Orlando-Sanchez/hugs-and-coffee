@@ -6,31 +6,29 @@
     <% end %>
   </div>
   <div class= "signup-form-container">
-    <div>
-      <h2 class= "form-header primary-font">Registro de usuario</h2>
-      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-        <%= render "devise/shared/error_messages", resource: resource %>
-        <div class= "form signup-form third-bkgrnd">
-          <h2 class="your-data primary-font">Tus datos</h2>
-          <div class= "field">
-            <%= f.label :email, 'Correo electrónico', class: "label primary-font" %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field field-fix third-bkgrnd" %>
-          </div>
-
-          <div class= "field">
-            <%= f.label :password, 'Contraseña', class: "label primary-font" %><br />
-            <%= f.password_field :password, autocomplete: "new-password", class: "field-field field-fix third-bkgrnd" %>
-          </div>
-
-          <div class= "field bottom-field">
-            <%= f.label :password_confirmation, 'Confirmar contraseña', class: "label primary-font" %><br />
-            <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "field-field field-fix third-bkgrnd" %>
-          </div>
+    <h2 class= "form-header primary-font">Registro de usuario</h2>
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+      <div class= "form signup-form third-bkgrnd">
+        <h2 class="your-data primary-font">Tus datos</h2>
+        <div class= "field">
+          <%= f.label :email, 'Correo electrónico', class: "label primary-font" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field field-fix third-bkgrnd" %>
         </div>
-        <div class= "submit-btn-wrapper">
-          <%= f.submit "Registrarme", class: "submit primary-font second-bkgrnd" %>
+
+        <div class= "field">
+          <%= f.label :password, 'Contraseña', class: "label primary-font" %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "field-field field-fix third-bkgrnd" %>
         </div>
-      <% end %>
-    </div>
+
+        <div class= "field bottom-field">
+          <%= f.label :password_confirmation, 'Confirmar contraseña', class: "label primary-font" %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "field-field field-fix third-bkgrnd" %>
+        </div>
+      </div>
+      <div class= "submit-btn-wrapper">
+        <%= f.submit "Registrarme", class: "submit primary-font second-bkgrnd" %>
+      </div>
+    <% end %>
   </div>
 </div>

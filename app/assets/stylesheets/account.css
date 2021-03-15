@@ -45,7 +45,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 310px;
+  width: 100%;
   height: 361px;
   box-shadow: 0px 0px 0px rgba(63, 63, 68, 0.05), 0px 1px 3px rgba(63, 63, 68, 0.15);
   border-radius: 5px;
@@ -54,10 +54,11 @@
 
 .alt-field {
   margin-bottom: 15.7px;
+  width: 100%;
 }
 
 .alt-field-field {
-  width: 278px;
+  width: 100%;
   height: 32px;
   border: 1px solid #C4CDD5;
   box-sizing: border-box;
@@ -157,7 +158,6 @@
   }
 
   .money-acc-wrapper {
-    width: 660px;
     height: 489px;
     padding: 45px 24px 24px 24px;
   }
@@ -169,7 +169,6 @@
   }
 
   .alt-field-field {
-    width: 612px;
     height: 40px;
     margin-top: 12px;
   }

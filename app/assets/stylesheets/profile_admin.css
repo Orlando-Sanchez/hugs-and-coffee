@@ -31,7 +31,6 @@
 
 .profile-form-container {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   background: #F8F8F8;
   padding: 0px 5px 79px 5px;
@@ -103,10 +102,11 @@
   height: 256px;
   background: #FFFFFF;
   margin-bottom: 20px;
+  width: 100%;
 }
 
 .bio-field-field {
-  width: 278px;
+  width: 100%;
   height: 64px;
   border: 1px solid #C4CDD5;
   box-sizing: border-box;
@@ -115,6 +115,7 @@
 }
 
 .profile-form-parttwo {
+  width: 100%;
   justify-content: flex-start;
   height: 229px;
   background: #FFFFFF;
@@ -141,7 +142,7 @@
 }
 
 .dropify-customized {
-  width: 310px;
+  width: 100%;
 }
 
 .submit-btn-break {
@@ -164,6 +165,7 @@
 
   .profile-fname-occptn {
     display:flex;
+    justify-content: space-between;
   }
 
   #profile-form-header {
@@ -178,7 +180,6 @@
   }
 
   .profile-form-partone {
-    width: 660px;
     height: 250px;
     padding: 24px;
     margin-bottom: 24px;
@@ -189,13 +190,11 @@
   }
 
   .bio-field-field {
-    width: 612px;
     height: 80px;
     margin-top: 12px;
   }
 
   .profile-form-parttwo {
-    width: 660px;
     height: 300px;
     padding: 24px;
     margin-bottom: 24px;
@@ -203,11 +202,7 @@
 
   .multipliers-wrapper {
     margin-top: 12px;
-  }
-
-  .dropify-customized {
-    width: 660px;
-  }
+  } 
 
   .submit-btn-break {
     margin-top: 32px;
@@ -233,7 +228,7 @@
   .admin-menu-desktop {
     display: flex;
     flex-direction: column;
-    width: 256px;
+    width: 18%;
     padding-left: 48px;
     padding-top: 32px;
     border-right: 0.5px solid #C4CDD5
@@ -270,10 +265,12 @@
   }
 
   .profile-form-container {
+    width: 82%;
     padding: 5px 70px 62px 70px;
   }
 
   #profile-form-header {
+    margin-top: 48px;
     height: 93px;
     padding-top: 5px;
   }
@@ -308,22 +305,27 @@
     justify-content: center;
   }
 
+  .profile-form-partone-wrapper {
+    width: 70%;
+  }
+
   .profile-form-parttwo {
+    width: 30%;
     margin-left: 32px;
     height: 474px;
-    width: 352px;
   }
 
   .field-profile {
     height: 40px;
+    width: 100%;
   }
 
   .field-profile-desktop {
-    width: 304px;
+    width: 100%;
   }
 
   .profile-partone-fix {
+    width: 45%;
     margin-bottom: 20px;
   }
 }
-

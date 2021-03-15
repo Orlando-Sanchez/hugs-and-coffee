@@ -5,6 +5,7 @@
 }
 
 .login-form {
+  width: 100%;
   margin-bottom: 24px;
 }
 
@@ -21,7 +22,6 @@
 }
 
 .login-form {
-  width: 660px;
   height: 348px;
   padding: 24px;
   margin-bottom: 32px;
@@ -36,7 +36,6 @@
 }
 
 .login-form {
-  width: 800px;
   height: 418px;
   padding: 32px;
   margin-bottom: 48px;

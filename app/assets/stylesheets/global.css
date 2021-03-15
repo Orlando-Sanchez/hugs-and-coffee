@@ -79,7 +79,7 @@ input {
 }
 
 .field-field {
-  width: 278px;
+  width: 100%;
   height: 32px;
   border: 1px solid #C4CDD5;
   box-sizing: border-box;
@@ -90,6 +90,7 @@ input {
 .submit-btn-wrapper {
   display: flex;
   justify-content: center;
+  margin-top: 24px;
 }
 
 .submit {
@@ -135,12 +136,16 @@ input {
 }
 
 .vectormsg-wrapper {
-  padding-left: 280px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
 }
 
 .msg-wrapper {
   position: absolute;
-  width: 310px;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
   height: 93px;
   border-radius: 10px;
   font-style: normal;
@@ -150,7 +155,6 @@ input {
   text-align: center;
   color: #434242;
   z-index: 2;
-  left: 20px;
   padding-top: 8px;
   top: 85px
 }
@@ -179,14 +183,10 @@ input {
 
 @media screen and (min-width: 736px) {
 
-.vectormsg-wrapper {
-  padding-left: 620px;
-}
 
 .msg-wrapper {
   font-size: 21px;
-  width: 660px;
-  left: 38px;
+  width: 60%;
   top: 85px
 }
 
@@ -216,7 +216,7 @@ input {
 }
 
 .field-field {
-  width: 612px;
+  /* width: 612px; */
   height: 40px;
   margin-top: 12px;
 }
@@ -247,28 +247,18 @@ input {
   }
 
   .field-field {
-    width: 644px;
+    /* width: 644px; */
   }
 
   .donor-field-field {
     width: 644px;
   }
-
-  .msg-wrapper {
-    left: 182px;
-  }
 }
 
 @media screen and (min-width: 1440px) {
-
-.vectormsg-wrapper {
-  padding-left: 1150px;
-}
   
 .msg-wrapper {
   font-size: 24px;
-  width: 1200px;
-  left: 120px;
   top: 85px
 }
   
@@ -299,7 +289,7 @@ input {
 }
 
 .field-field {
-  width: 737.08px;
+  /* width: 737.08px; */
   height: 48px;
 }
 

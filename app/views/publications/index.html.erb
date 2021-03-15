@@ -27,7 +27,7 @@
           <% if @publications.any? %>
             <div class="image-list-wrapper third-bkgrnd">
             <% @publications.each do |publication| %>
-              <%= link_to edit_publication_path(id: publication.id) do %>
+              <%= link_to edit_publication_path(id: publication.id), class: "publ-image-wrapper" do %>
                 <%= image_tag publication.image, class: "publ-image-link" %>
               <% end %>
             <% end %>

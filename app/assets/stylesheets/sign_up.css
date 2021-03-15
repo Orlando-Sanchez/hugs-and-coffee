@@ -1,6 +1,14 @@
 .signup-form-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.new_user {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .form-header {
@@ -10,7 +18,8 @@
 }
 
 .signup-form {
-  margin-bottom: 24px;
+  width: 100%;
+  /* margin-bottom: 24px; */
 }
 
 .your-data {
