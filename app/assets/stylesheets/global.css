@@ -246,6 +246,11 @@ input {
     justify-content: center;
   }
 
+  .field {
+    display: flex;
+    flex-direction: column;
+  }
+
   .field-field {
     /* width: 644px; */
   }

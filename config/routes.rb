@@ -72,8 +72,12 @@ Rails.application.routes.draw do
   resources :profiles
   resources :publications, except: :show
   resources :monetary_accounts, except: :show
-  put '/toggle_profile', to: 'profiles#toggle_profile'
+
   root to: "home#index"
+
+  get '/user' => "profiles#edit", :as => :user_root
+
+  put '/toggle_profile', to: 'profiles#toggle_profile'
 
   get 'profiles/:id/appreciations', to: 'appreciations#select', :as => 'appreciations'
 

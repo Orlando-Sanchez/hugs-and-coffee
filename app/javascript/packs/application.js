@@ -35,6 +35,7 @@ import dropify from './dropify';
     loop: true,
     rtl:true,    
     margin:24,
+    autoplay: true,
     responsive:{
       0:{
         items:1
