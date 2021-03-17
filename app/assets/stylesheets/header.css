@@ -215,6 +215,19 @@
   display: block;
 }
 
+@media screen and (min-width: 375px) {
+  .admin-header {
+    padding-right: 154.695px;
+  }
+}
+
+
+@media screen and (min-width: 425px) {
+  .admin-header {
+    padding-right: 179.695px;
+  }
+}
+
 @media screen and (min-width: 736px) {
   .header {
     width: 100%;
