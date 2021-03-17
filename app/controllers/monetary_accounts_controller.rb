@@ -21,7 +21,7 @@ class MonetaryAccountsController < ApplicationController
   def create
     @monetary_account = current_user.monetary_accounts.build(monetary_account_params)
     if @monetary_account.save
-      redirect_to root_url, notice: "La cuenta ha sido creada"
+      redirect_to monetary_accounts_url, notice: "La cuenta ha sido creada"
     else
       redirect_to new_monetary_account_url, alert2: "No se pudo crear la cuenta"
     end

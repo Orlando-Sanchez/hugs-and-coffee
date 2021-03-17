@@ -1,6 +1,3 @@
-.profile-form-desktop {
-}
-
 .profile-menu-inner {
   height: 1081px;
 }
@@ -114,6 +111,10 @@
   margin-top: 6px;
 }
 
+.bio-field-field-fix {
+  margin-top: 0;
+}
+
 .profile-form-parttwo {
   width: 100%;
   justify-content: flex-start;
@@ -156,9 +157,6 @@
 }
 
 @media screen and (min-width: 736px) {
- .profile-edit-view {
-  }
-
   .profile-form-container {
     padding: 0 38px 45px 38px;
   }
@@ -212,6 +210,12 @@
   .profile-submit-wrapper {
     display: flex;
     justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bio-field-field-fix {
+    margin-top: 0;
   }
 }
 
