@@ -149,8 +149,6 @@
 .flex-space {
   display: flex;
   justify-content: space-between;
-  padding-left: 18px;
-  padding-right: 18px;
 }
 
 .appreciation-link {
@@ -288,6 +286,18 @@
   color: #FFFFFF
 }
 
+@media screen and (min-width: 375px) {
+  .flex-space {
+    padding: 0 5%;
+  }
+}
+
+@media screen and (min-width: 425px) {
+  .flex-space {
+    padding: 0 10%;
+  }
+}
+
 @media screen and (min-width: 736px) {
 
   .timer-seconds-wrapper {
@@ -362,13 +372,11 @@
   }
 
   .flex-space {
-    padding-left: 122px;
-    padding-right: 122px;
+    padding: 0 15%;
   }
 
   .girl-img-wrapper {
-    margin-top: 24px;
-    margin-bottom: 24px;
+    margin: 24px 0;
   }
 
   .instruction {
@@ -412,6 +420,10 @@
 @media screen and (min-width: 1024px) {
   .coffee-main-wrapper {
     padding: 40px 166px;
+  }
+
+  .flex-space {
+    padding: 0 20%;
   }
 }
 
@@ -477,8 +489,7 @@
   }
 
   .flex-space {
-    padding-left: 464px;
-    padding-right: 464px;
+   padding: 0 30%;
   }
 
   .girl-img-wrapper {

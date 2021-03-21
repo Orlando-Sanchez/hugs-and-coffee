@@ -9,17 +9,17 @@
   <div class= "login-form-container">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
-      <div class= " form login-form third-bkgrnd">
+      <div class= "form login-form third-bkgrnd">
         <h2 class= "login-header primary-font">Login</h2>
 
         <div class="field">
           <%= f.label :email, 'Correo electrónico', class: "label primary-font" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field field-fix third-bkgrnd" %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "field-field user-field-fix third-bkgrnd" %>
         </div>
 
         <div class="field">
           <%= f.label :password, 'Contraseña', class: "label primary-font" %><br />
-          <%= f.password_field :password, autocomplete: "current-password", class: "field-field field-fix third-bkgrnd" %>
+          <%= f.password_field :password, autocomplete: "current-password", class: "field-field user-field-fix third-bkgrnd" %>
         </div>
       </div> 
       <div class= "submit-btn-wrapper">

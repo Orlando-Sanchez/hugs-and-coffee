@@ -10,35 +10,37 @@
 }
 
 @media screen and (min-width: 736px) {
-.login-header {
-  line-height: 21px;
-  font-size: 18px;
-  margin-bottom: 32px;
-}
+  .login-header {
+    line-height: 21px;
+    font-size: 18px;
+    margin-bottom: 32px;
+  }
 
-.login-form-container {
-  display: flex;
-  justify-content: center;
-}
+  .login-form-container {
+    display: flex;
+    justify-content: center;
+  }
 
-.login-form {
-  height: 348px;
-  padding: 24px;
-  margin-bottom: 32px;
-}
+  .login-form {
+    width: 660px;
+    height: 348px;
+    padding: 24px;
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-.login-header {
-  font-size: 20px;
-  line-height: 23px;
-  margin-bottom: 40px;
-}
+  .login-header {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 40px;
+  }
 
-.login-form {
-  height: 418px;
-  padding: 32px;
-  margin-bottom: 48px;
-}
+  .login-form {
+    width: 800px;
+    height: 418px;
+    padding: 32px;
+    margin-bottom: 48px;
+  }
 }
 

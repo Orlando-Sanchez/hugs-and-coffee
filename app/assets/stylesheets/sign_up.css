@@ -30,31 +30,36 @@
 }
 
 @media screen and (min-width: 736px) {
-.form-header {
-  font-size: 18px;
-  line-height: 21px;
-  width: 161px;
-  height: 17px;
-  margin-bottom: 24px;
+  .form-header {
+    font-size: 18px;
+    line-height: 21px;
+    width: 161px;
+    height: 17px;
+    margin-bottom: 24px;
+  }
+
+  .signup-form {
+    width: 660px;
+    height: 346px;
+    padding: 24px;
+    margin-bottom: 40px;
+  }
+
+  .your-data {
+    font-size: 18px;
+    line-height: 21px;
+    height: 17px;
+    margin-bottom: 32px;
+  }
 }
 
-.signup-form {
-  width: 660px;
-  height: 346px;
-  padding: 24px;
-  margin-bottom: 40px;
-}
-
-.your-data {
-  font-size: 18px;
-  line-height: 21px;
-  height: 17px;
-  margin-bottom: 32px;
-}
+@media screen and (min-width: 1024px) {
+  .signup-form {
+    height: 398px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-
   .form-header {
     font-size: 24px;
     line-height: 28px;
@@ -65,7 +70,7 @@
 
   .signup-form {
     width: 800px;
-    height: 418px;
+    height: 458px;
     padding: 32px;
     margin-bottom: 48px;
   }

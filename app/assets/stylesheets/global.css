@@ -1,13 +1,15 @@
+input {
+  font-family: Roboto !important;
+}
+
 .main {
   padding: 24px 20px;
+  height: 100vh;
 }
+
 
 .link-font-color {
   color: #434242;;
-}
-
-input {
-  font-family: Roboto !important;
 }
 
 .primary-font {
@@ -251,8 +253,9 @@ input {
     flex-direction: column;
   }
 
-  .field-field {
-    /* width: 644px; */
+  .user-field-fix {
+    width: 612px;
+    height: 40px;
   }
 
   .donor-field-field {
@@ -262,58 +265,62 @@ input {
 
 @media screen and (min-width: 1440px) {
   
-.msg-wrapper {
-  font-size: 24px;
-  top: 85px
-}
-  
-.main {
-  padding: 48px 48px;
-}
+  .msg-wrapper {
+    font-size: 24px;
+    top: 85px
+  }
+    
+  .main {
+    padding: 48px 48px;
+  }
 
-.back-wrapper {
-  margin-bottom: 48px;
-}
+  .back-wrapper {
+    margin-bottom: 48px;
+  }
 
-.vector-img {
-  width: 10px;
-  height: 14px;
-}
+  .vector-img {
+    width: 10px;
+    height: 14px;
+  }
 
-.back {
-  line-height: 23px;
-}
+  .back {
+    line-height: 23px;
+  }
 
-.field {
-  margin-bottom: 32px;
-}
+  .user-field-fix {
+    width: 737.08px;
+  }
 
-.label {
-  font-size: 18px;
-  line-height: 21px;
-}
+  .field {
+    margin-bottom: 32px;
+  }
 
-.field-field {
-  /* width: 737.08px; */
-  height: 48px;
-}
+  .label {
+    font-size: 18px;
+    line-height: 21px;
+  }
 
-.donor-field-field {
-  width: 737.08px;
-}
+  .field-field {
+    /* width: 737.08px; */
+    height: 48px;
+  }
 
-.bottom-field {
-  margin-bottom: 0;
-}
+  .donor-field-field {
+    width: 737.08px;
+  }
 
-.submit {
-  width: 224px;
-  height: 64px;
-  font-size: 24px;
-}
+  .bottom-field {
+    margin-bottom: 0;
+  }
 
-.submit-2 {
-  width: 160px !important;
-  height: 48px !important;
-}
+  .submit {
+    width: 224px;
+    height: 64px;
+    font-size: 24px;
+  }
+
+  .submit-2 {
+    width: 160px !important;
+    height: 48px !important;
+  }
 }
