@@ -13,4 +13,6 @@ class Publication < ApplicationRecord
   has_one_attached :image
   validates :profile, presence: true
   validates :subtitle, :image, presence: true
+
+  validates_length_of :subtitle, maximum: 20, allow_blank: true
 end

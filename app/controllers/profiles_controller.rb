@@ -63,6 +63,6 @@ class ProfilesController < ApplicationController
 
   def is_published
     @profile = Profile.where('id = ?', params[:id]).first
-    redirect_to(root_url) unless @profile.is_published
+    redirect_to(root_url, notice: "El perfil buscado no existe") unless @profile&.is_published
   end
 end
