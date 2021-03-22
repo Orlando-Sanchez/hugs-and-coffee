@@ -258,9 +258,7 @@ input {
     height: 40px;
   }
 
-  .donor-field-field {
-    width: 644px;
-  }
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -303,10 +301,6 @@ input {
   .field-field {
     /* width: 737.08px; */
     height: 48px;
-  }
-
-  .donor-field-field {
-    width: 737.08px;
   }
 
   .bottom-field {

@@ -99,7 +99,7 @@
 
 
 .donor-field-field {
-  width: 278px;
+  width: 100%;
   height: 64px;
   border: 1px solid #C4CDD5;
   box-sizing: border-box;
@@ -164,7 +164,7 @@
 }
 
 .coffee-img {
-  width: 64px;
+  width: 55px;
   height: 80.25px;
   margin-right: 12px;
 }
@@ -260,7 +260,7 @@
 .multiplier-btn {
   text-align: center;
   border-radius: 50%;
-  width: 41.06px;
+  width: 36.06px;
   height: 40px;
   border: 1px solid #EE4380;
   box-sizing: border-box;
@@ -284,6 +284,15 @@
 
 .selected-btn-text {
   color: #FFFFFF
+}
+
+.appreciation-form-field {
+  width: 100%;
+  height: 32px;
+  border: 1px solid #C4CDD5;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: 6px;
 }
 
 @media screen and (min-width: 375px) {
@@ -330,7 +339,6 @@
   }
 
   .donor-field-field {
-    width: 612px;
     height: 80px;
     margin-top: 12px;
   }
@@ -345,10 +353,6 @@
 
   .accounts-header-wrapper {
     padding: 24px 24px 8px 24px;
-  }
-
-  .donor-field {
-    width: 612px;
   }
 
   .donor-data-header {
@@ -427,8 +431,15 @@
   }
 }
 
-
 @media screen and (min-width: 1440px) {
+
+  .donor-field-field {
+    width: 736px;
+  }
+
+  .appreciation-form-field {
+    width: 736px;
+  }
 
   .accounts-header-wrapper {
     width: 800px;
@@ -460,11 +471,6 @@
     height: 368px;
     /* left: 655px;
     top: 295px */
-  }
-
-
-  .donor-field-field {
-    width: 737.08px
   }
 
   .heart-img {
@@ -525,5 +531,15 @@
     width: 800px;
     padding: 32px 0 0 32px;
     margin-bottom: 48px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .coffee-form-wrapper {
+    padding: 0 272px 71px 345px;
+  }
+
+  .entity-data-wrapper {
+    width: 800px;
   }
 }
