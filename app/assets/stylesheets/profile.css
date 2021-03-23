@@ -1,3 +1,8 @@
+.profile-wrapper {
+  padding-top: 24px;
+  height: 100vh;
+}
+
 .appr-donor-fn {
   margin-bottom: 8px;
 }
@@ -55,7 +60,6 @@
 
 .bio-wrapper {
   padding: 0 20px;
-  margin-top: 24px;
   margin-bottom: 20px;
 }
 
@@ -119,8 +123,11 @@
 
   .bio-wrapper {
     padding: 0 64px;
-    margin-top: 40px;
     margin-bottom: 24px;
+  }
+  
+  .profile-wrapper {
+    padding-top: 40px;
   }
   
   .profile-font {
@@ -155,9 +162,12 @@
 
   .bio-wrapper {
     padding: 0 207px;
-    margin-top: 48px;
     margin-bottom: 32px;
   }
+
+  .profile-wrapper {
+    padding-top: 48px;
+  }  
   
   .profile-font {
     font-size: 24px;

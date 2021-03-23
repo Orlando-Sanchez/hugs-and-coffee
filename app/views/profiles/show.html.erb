@@ -1,45 +1,49 @@
 <%= render 'layouts/profile_header' %>
-<div class="primary-bkgrnd">
+<div class="profile-wrapper primary-bkgrnd">
   <div class="bio-wrapper">
     <p class="primary-font profile-font"><%= @profile.biography %></p>
   </div>
   <div>
-    <div class="owl-carousel owl-theme">
-      <% @publications.each do |publication| %>
-        <div>
-          <%= image_tag(publication.image, class: "carousel-items") %>
-          <p class="carousel-item-subtitle primary-font"><%= publication.subtitle %></p>
-        </div>
-      <% end %>
-    </div>  
-    <div class="owl-carousel owl-theme primary-font">
-      <% @appreciations.each do |appreciation| %>
-        <div class="appr-carousel-item third-bkgrnd">
-          <div class="carousel-item-data">
-            <div class="carousel-appr-img">
-              <% if appreciation.appreciation_kind == 'coffee' %>
-                <%= image_tag("coffee.svg", class: "appreciation-img") %>
-                <div class="appr-quantity third-bkgrnd">
-                  <p><%= appreciation.coffees_quantity%></p>
-                </div>
-              <% elsif appreciation.appreciation_kind == 'hug' %>
-                <%= image_tag("heart.svg", class: "appreciation-img") %>
-                <div class="appr-quantity third-bkgrnd">
-                  <p><%= appreciation.hug_seconds%></p>
-                </div>
-              <% end %>
+    <% if @publications.any? %>
+      <div class="owl-carousel owl-theme">
+        <% @publications.each do |publication| %>
+          <div>
+            <%= image_tag(publication.image, class: "carousel-items") %>
+            <p class="carousel-item-subtitle primary-font"><%= publication.subtitle %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+    <% if @publications.any? %>
+      <div class="owl-carousel owl-theme primary-font">
+        <% @appreciations.each do |appreciation| %>
+          <div class="appr-carousel-item third-bkgrnd">
+            <div class="carousel-item-data">
+              <div class="carousel-appr-img">
+                <% if appreciation.appreciation_kind == 'coffee' %>
+                  <%= image_tag("coffee.svg", class: "appreciation-img") %>
+                  <div class="appr-quantity third-bkgrnd">
+                    <p><%= appreciation.coffees_quantity%></p>
+                  </div>
+                <% elsif appreciation.appreciation_kind == 'hug' %>
+                  <%= image_tag("heart.svg", class: "appreciation-img") %>
+                  <div class="appr-quantity third-bkgrnd">
+                    <p><%= appreciation.hug_seconds%></p>
+                  </div>
+                <% end %>
+              </div>
+              <div>
+                <p class="profile-form-title appr-donor-fn"><%= appreciation.donor_fullname %></p>
+                <p><%= appreciation.donor_occupation %></p>
+              </div>            
             </div>
-            <div>
-              <p class="profile-form-title appr-donor-fn"><%= appreciation.donor_fullname %></p>
-              <p><%= appreciation.donor_occupation %></p>
-            </div>            
+            <div class="appr-msg">
+              <p><%= appreciation.donor_message%></p>
+            </div>
           </div>
-          <div class="appr-msg">
-            <p><%= appreciation.donor_message%></p>
-          </div>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
     <div class="submit-btn-wrapper">
       <%= link_to appreciations_path, class: "second-bkgrnd new-publ-link2" do %>
         <h2 class="primary-font new-publ-link-text">Agradecer</h2>
