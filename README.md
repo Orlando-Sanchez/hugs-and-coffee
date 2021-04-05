@@ -1,24 +1,27 @@
-# README
+# Hugs and Coffee
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an application built with Ruby on Rails for people to donate and give artists appreciation.
 
-Things you may want to cover:
+## Live demo
 
-* Ruby version
+https://hugsandcoffee.herokuapp.com/
 
-* System dependencies
+## Getting started
 
-* Configuration
+To get started with the app, clone the repo and then install the needed gems:
 
-* Database creation
+```
+$ bundle install
+```
 
-* Database initialization
+Next, migrate the database:
 
-* How to run the test suite
+```
+$ rails db:migrate
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Finally, run the app in a local server:
 
-* Deployment instructions
-
-* ...
+```
+$ rails server
+```
